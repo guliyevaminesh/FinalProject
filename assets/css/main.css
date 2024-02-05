@@ -1106,3 +1106,806 @@ footer .container .row .paymentext {
   color: white;
   margin-top: 20px;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.aboutushead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+  position: absolute;
+  z-index: 1;
+}
+.aboutushead nav {
+  width: 80%;
+}
+.aboutushead nav img {
+  width: 240px;
+}
+.aboutushead nav .collapseDiv {
+  justify-content: flex-end;
+}
+.aboutushead nav .collapseDiv ul {
+  display: flex;
+  gap: 15px;
+}
+.aboutushead nav .collapseDiv ul li a {
+  font-weight: 700;
+  color: black !important;
+  font-size: 14px;
+}
+.aboutushead nav .collapseDiv ul li a:hover {
+  background-color: #018498;
+  color: white !important;
+  width: 100%;
+  border-radius: 5px;
+}
+.aboutushead .canvasbtn {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+.aboutushead .canvasbtn:hover {
+  background-color: transparent;
+  border: none;
+}
+.aboutushead .information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 30px;
+}
+.aboutushead .information h2 {
+  color: black;
+  font-weight: 700;
+  font-size: 28px;
+}
+.aboutushead .information .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.aboutushead .information .contact span {
+  font-weight: 450;
+  color: black;
+  font-size: 20px;
+}
+.aboutushead .information .contact .contacticon {
+  background-color: #018498;
+  width: 90px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  margin-top: 15px;
+}
+.aboutushead .socialnetwork {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.aboutushead .socialnetwork .socialnetworkicon {
+  border: 1px solid #018498;
+  padding: 15px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.aboutushead span {
+  font-size: 20px;
+}
+.aboutushead .dashboard {
+  background-color: #018498;
+  border: none;
+  outline: none;
+  width: 190px;
+  height: 70px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+.aboutushead .dashboard img {
+  width: 60px;
+}
+.aboutushead .dashboard span {
+  color: white;
+  font-weight: 500;
+}
+
+.hover-content {
+  display: none;
+  position: absolute;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 5px;
+}
+.hover-content .about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  color: black !important;
+  padding-right: 15px;
+}
+.hover-content .about a {
+  color: black !important;
+}
+.hover-content .about a:hover {
+  color: white !important;
+  background-color: #018498;
+  padding: 7px;
+  width: auto;
+  border-radius: 3px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.nav-item:hover .hover-content {
+  display: block;
+}
+
+#getinformation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/assets/img/header-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 30px;
+}
+#getinformation .container {
+  margin: 30px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#getinformation .container .row {
+  margin: 30px;
+  padding: 30px;
+}
+#getinformation .container .row .getinformationtext {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+#getinformation .container .row .getinformationtext h1 {
+  color: black;
+  font-weight: 700;
+}
+#getinformation .container .row .getinformationtext a {
+  text-decoration: none;
+  color: black;
+}
+
+#bespokeadventure {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#bespokeadventure .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#bespokeadventure .container .row .experiences {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+#bespokeadventure .container .row .experiences h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#bespokeadventure .container .row .experiences #experiencesform .row #fullname {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 60px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.6);
+  border-bottom: 2px solid #018498;
+  outline: none;
+}
+#bespokeadventure .container .row .experiences #experiencesform .row #emailaddress {
+  width: 160px;
+  height: 60px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.6);
+  border-bottom: 2px solid #018498;
+  outline: none;
+}
+#bespokeadventure .container .row .experiences #experiencesform .row #phonenumber {
+  width: 160px;
+  height: 60px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.6);
+  border-bottom: 2px solid #018498;
+  outline: none;
+}
+#bespokeadventure .container .row .experiences #experiencesform .row #yourdescription {
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.6);
+  border-bottom: 2px solid #018498;
+  outline: none;
+  padding-top: 15px;
+  margin-top: 30px;
+}
+#bespokeadventure .container .row .experiences #experiencesform #sendform {
+  width: 150px;
+  height: 50px;
+  background-color: #018498;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+}
+#bespokeadventure .container .row .experiences #experiencesform #sendform:hover {
+  background-color: #074a55;
+}
+#bespokeadventure .container .row .adventurecontact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#bespokeadventure .container .row .adventurecontact .contactus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#bespokeadventure .container .row .adventurecontact .contactus img {
+  width: 80px;
+}
+
+.experiences {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#bespokeHeader,
+#experiencesform {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.adventurecontact {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#bespokeHeader.show,
+#experiencesform.show,
+.adventurecontact.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#sailuxeadvantages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  opacity: 0;
+}
+
+#sailuxeadvantages.show {
+  opacity: 1;
+}
+
+.advantages,
+.expertise {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.advantages.show,
+.expertise.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  background: linear-gradient(rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7)), url("/assets/img/footer-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+footer .container .row .sailuxelogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+footer .container .row .sailuxelogo img {
+  max-width: 100%;
+}
+footer .container .row .advantages {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+footer .container .row .advantages img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .expertise {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  height: 180px;
+}
+footer .container .row .expertise img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .socialnetworks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+footer .container .row .socialnetworks div {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+footer .container .row .socialnetworks div:hover {
+  background-color: #018498;
+}
+footer .container .row .payments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+footer .container .row .paymentext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.aboutushead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+  position: absolute;
+  z-index: 1;
+}
+.aboutushead nav {
+  width: 80%;
+}
+.aboutushead nav img {
+  width: 240px;
+}
+.aboutushead nav .collapseDiv {
+  justify-content: flex-end;
+}
+.aboutushead nav .collapseDiv ul {
+  display: flex;
+  gap: 15px;
+}
+.aboutushead nav .collapseDiv ul li a {
+  font-weight: 700;
+  color: black !important;
+  font-size: 14px;
+}
+.aboutushead nav .collapseDiv ul li a:hover {
+  background-color: #018498;
+  color: white !important;
+  width: 100%;
+  border-radius: 5px;
+}
+.aboutushead .canvasbtn {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+.aboutushead .canvasbtn:hover {
+  background-color: transparent;
+  border: none;
+}
+.aboutushead .information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 30px;
+}
+.aboutushead .information h2 {
+  color: black;
+  font-weight: 700;
+  font-size: 28px;
+}
+.aboutushead .information .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.aboutushead .information .contact span {
+  font-weight: 450;
+  color: black;
+  font-size: 20px;
+}
+.aboutushead .information .contact .contacticon {
+  background-color: #018498;
+  width: 90px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  margin-top: 15px;
+}
+.aboutushead .socialnetwork {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.aboutushead .socialnetwork .socialnetworkicon {
+  border: 1px solid #018498;
+  padding: 15px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.aboutushead span {
+  font-size: 20px;
+}
+.aboutushead .dashboard {
+  background-color: #018498;
+  border: none;
+  outline: none;
+  width: 190px;
+  height: 70px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+.aboutushead .dashboard img {
+  width: 60px;
+}
+.aboutushead .dashboard span {
+  color: white;
+  font-weight: 500;
+}
+
+.hover-content {
+  display: none;
+  position: absolute;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 5px;
+}
+.hover-content .about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  color: black !important;
+  padding-right: 15px;
+}
+.hover-content .about a {
+  color: black !important;
+}
+.hover-content .about a:hover {
+  color: white !important;
+  background-color: #018498;
+  padding: 7px;
+  width: auto;
+  border-radius: 3px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.nav-item:hover .hover-content {
+  display: block;
+}
+
+#getinformation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/assets/img/header-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 30px;
+}
+#getinformation .container {
+  margin: 30px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#getinformation .container .row {
+  margin: 30px;
+  padding: 30px;
+}
+#getinformation .container .row .getinformationtext {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+#getinformation .container .row .getinformationtext h1 {
+  color: black;
+  font-weight: 700;
+}
+#getinformation .container .row .getinformationtext a {
+  text-decoration: none;
+  color: black;
+}
+
+#sailuxeadvantages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  opacity: 0;
+}
+
+#sailuxeadvantages.show {
+  opacity: 1;
+}
+
+.advantages,
+.expertise {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.advantages.show,
+.expertise.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+#yachtingexcellence {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+#yachtingexcellence h3 {
+  color: black;
+  font-weight: 700;
+}
+#yachtingexcellence span {
+  font-size: 14px;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 8px;
+}
+.question p {
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.toggle-answer {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+}
+
+.answer {
+  display: none;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 8px;
+}
+.answer p {
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: transparent;
+  padding: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(1, 132, 152, 0.5);
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  background: linear-gradient(rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7)), url("/assets/img/footer-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+footer .container .row .sailuxelogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+footer .container .row .sailuxelogo img {
+  max-width: 100%;
+}
+footer .container .row .advantages {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+footer .container .row .advantages img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .expertise {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  height: 180px;
+}
+footer .container .row .expertise img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .socialnetworks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+footer .container .row .socialnetworks div {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+footer .container .row .socialnetworks div:hover {
+  background-color: #018498;
+}
+footer .container .row .payments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+footer .container .row .paymentext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+}

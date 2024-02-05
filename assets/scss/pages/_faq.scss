@@ -159,7 +159,7 @@
 }
 
 
-#aboutus{
+#getinformation{
     width: 100%;
     display: flex;
     align-items: center;
@@ -170,7 +170,7 @@
     background-repeat: no-repeat;
     position: relative;
     padding: 30px;
-    .aboutuscontainer{
+    .container{
         margin: 30px;
         padding: 30px;
         display: flex;
@@ -179,7 +179,7 @@
         .row{
             margin: 30px;
             padding: 30px;
-            .aboutustext{
+            .getinformationtext{
                 margin: 20px;
                 padding: 20px;
                 text-align: center;
@@ -195,8 +195,6 @@
         }
     }
 }
-
-
 
 #sailuxeadvantages{
     width: 100%;
@@ -222,55 +220,63 @@
 .expertise.show {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0.8s;
+    transition-delay: 0.8s; 
 }
 
-#seascollaboration{
+#yachtingexcellence{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    .container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .row{
-            .collaborationtext{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                margin-top: 20px;
-                margin-bottom: 30px;
-                color: black;
-               h3{
-                font-weight: 700;
-               }
-               span{
-                font-weight: 500;
-               }
-            }
-            .collaborationphoto{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        }
+    justify-content: center; 
+    margin-top: 30px;
+    h3{
+        color: black;
+        font-weight: 700;
     }
-}
-.collaborationphoto img {
-    max-width: 100%;
-    filter: grayscale(100%); /* Başlangıçta gri tonlama */
-    transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.collaborationphoto:hover img {
-    filter: grayscale(0%); /* Hover olduğunda gri tonlamayı kaldır (renkli hale getir) */
-    transform: translateY(-5px); /* Hover olduğunda 10px yukarı kaldır */
-}
+    span{
+        font-size: 14px;
+    }
+    }
+.question-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 8px;
+    p{
+        color: black;
+        font-weight: 600;
+        font-size: 18px;
+    }
+  }
+  
+  .toggle-answer {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .answer {
+    display: none;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 8px;
+    p{
+        color: black;
+        font-weight: 500;
+        font-size: 14px;
+        background-color: transparent;
+        padding: 5px;
+        box-shadow: 5px 10px 15px 0px rgb(1, 132, 152,0.5);
+    }
+  }
 
 footer{
     width: 100%;
