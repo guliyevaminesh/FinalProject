@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.aboutushead{
+.faqhead{
     width: 100%;
     display: flex;
     align-items: center;
@@ -102,26 +102,37 @@
     span{
         font-size: 20px;
     }
-    .dashboard{
-        img{
-            width: 60px;
-        }
-        background-color: #018498;
-        border: none;
-        outline: none;
-        width: 190px;
-        height: 70px;
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 30px;
-        border-radius: 5px;
-        span{
-            color: white;
-            font-weight: 500;
-        }
+}
+@media screen and (max-width: 660px) {
+    .dashboard {
+        display: none !important;
     }
+
+    .canvasbtn {
+        display: none;
+    }
+}
+
+.dashboard {
+    img {
+        width: 60px;
+    }
+    background-color: #018498;
+    border: none;
+    outline: none;
+    width: 190px;
+    height: 70px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.dashboard span {
+    color: white;
+    font-weight: 500;
 }
 
 .hover-content {
@@ -236,47 +247,18 @@
     span{
         font-size: 14px;
     }
+    
+    
     }
-.question-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .question {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
-    padding: 5px;
-    border-radius: 8px;
-    p{
-        color: black;
-        font-weight: 600;
-        font-size: 18px;
+    .accordion-button:focus {
+        background-color: transparent !important;
+        box-shadow: none !important; 
     }
-  }
   
-  .toggle-answer {
-    cursor: pointer;
-    font-size: 16px;
-    border: none;
-    background-color: transparent;
-  }
+ 
   
-  .answer {
-    display: none;
-    background-color: transparent;
-    padding: 10px;
-    border-radius: 8px;
-    p{
-        color: black;
-        font-weight: 500;
-        font-size: 14px;
-        background-color: transparent;
-        padding: 5px;
-        box-shadow: 5px 10px 15px 0px rgb(1, 132, 152,0.5);
-    }
-  }
+  
+  
 
 footer{
     width: 100%;

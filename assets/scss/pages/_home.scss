@@ -101,28 +101,50 @@ header{
     span{
         font-size: 20px;
     }
-    .dashboard{
-        img{
-            width: 60px;
-        }
-        background-color: #018498;
-        border: none;
-        outline: none;
-        width: 190px;
-        height: 70px;
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 30px;
-        border-radius: 5px;
-        span{
-            color: white;
-            font-weight: 500;
-        }
+}
+@media screen and (max-width: 660px) {
+    .canvasbtn {
+        display: none;
     }
 }
 
+.dashboard {
+    img {
+        width: 60px;
+    }
+    background-color: #018498;
+    border: none;
+    outline: none;
+    width: 190px;
+    height: 70px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.dashboard span {
+    color: white;
+    font-weight: 500;
+}
+
+/* Hide the dashboard button when viewport width is less than or equal to 560px */
+@media screen and (max-width: 660px) {
+    .dashboard {
+        display: none;
+    }
+}
+.navbar-toggler {
+    background-color: white; /* Button rengini beyaz yapar */
+    /* Diğer stillendirme özellikleri */
+}
+
+.navbar-toggler-icon {
+    color: black; /* İkon rengini siyah yapar */
+    /* Diğer stillendirme özellikleri */
+}
 .hover-content {
     display: none;
     position: absolute;   
@@ -161,3 +183,39 @@ header{
     width: 100%;
     position: relative;
 }
+
+#carouselExampleControls h1{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white; /* Yazı rengi ayarlamak isterseniz */
+  }
+#carouselExampleControls p {
+    position: absolute;
+    top: 40%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white; /* Yazı rengi ayarlamak isterseniz */
+  }
+  #carouselExampleControls button {
+    position: absolute;
+    top: 50%;
+    left:17%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white; 
+    border: none;
+    background-color: #018498;
+    width: 170px;
+    height: 60px;
+    border-radius: 2px;
+    font-weight: 600;
+    &:hover{
+        background-color: #094149;
+    }
+  }
+  
+ 

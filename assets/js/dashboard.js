@@ -15,3 +15,18 @@ $(document).ready(function () {
         }
     });
 });
+
+const loginForm = document.getElementById('loginForm');
+const registerForm = document.getElementById('registerForm');
+const showRegisterForm = document.getElementById('showRegisterForm');
+const showLoginForm = document.getElementById('showLoginForm');
+
+showRegisterForm.addEventListener('click', function() {
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'block';
+});
+
+showLoginForm.addEventListener('click', function() {
+    registerForm.style.display = 'none';
+    loginForm.style.display = 'block';
+});

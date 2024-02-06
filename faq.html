@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <header class="aboutushead">
+    <header class="faqhead">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#"><img src="./assets/img/sailuxe-logo-1.png" alt="sailuxelogo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,13 +41,13 @@
                         <a class="nav-link" href="#">Destinations <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item active">
-                        <a class="nav-link" href="#">Why Choose Us <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./whychooseus.html">Why Choose Us <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item active">
                         <a class="nav-link" href="#">Blog <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item active">
-                        <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./contact.html">Contact <span class="sr-only">(current)</span></a>
                       </li>
                   </ul>
                 </div>
@@ -100,10 +100,10 @@
   </div>
 </div>
  
-    <!-- <button class="dashboard">
+    <button class="dashboard">
         <img src="./assets/img/Screenshot 2024-01-31 144259.png" alt="Yacht">
         <span>Dashboard</span>
-    </button> -->
+    </button>
 
     </header>
 
@@ -129,66 +129,72 @@
                         <span>Find answers to common queries and discover more.</span>
                     </div>
 
-                    <div class="question-container">
-                        <div class="question">
-                          <p>What yacht rental options does Sailuxe offer?</p>
-                          <button class="toggle-answer">+</button>
-                        </div>
-                        <div class="answer">
-                          <p>Sailuxe provides various options of exclusive and luxurious yachts in different sizes and with distinct features. Boat sizes, services, and routes can be personalized based on customers' preferences and needs.</p>
-                        </div>
-                      </div>
-
-                      <div class="question-container">
-                        <div class="question">
-                          <p>How does the yacht rental process work?</p>
-                          <button class="toggle-answer">+</button>
-                        </div>
-                        <div class="answer">
-                          <p>Renting a yacht with Sailuxe is straightforward. Choose a yacht that fits your needs, make a reservation, and let us handle everything for your journey. Our customer-centric approach ensures assistance at every step.</p>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            What yacht rental options does Sailuxe offer?
+                          </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Sailuxe provides various options of exclusive and luxurious yachts in different sizes and with distinct features. Boat sizes, services, and routes can be personalized based on customers' preferences and needs.</div>
                         </div>
                       </div>
 
-                      <div class="question-container">
-                        <div class="question">
-                          <p>Does Sailuxe offer crew services?</p>
-                          <button class="toggle-answer">+</button>
-                        </div>
-                        <div class="answer">
-                        <p>Yes, Sailuxe provides professional crews for every journey. Our experienced teams ensure your comfort and safety throughout the trip.</p>    
-                        </div>
-                      </div>
-
-                      <div class="question-container">
-                        <div class="question">
-                          <p>What destinations can I travel to with Sailuxe?</p>
-                          <button class="toggle-answer">+</button>
-                        </div>
-                        <div class="answer">
-                            <p>Sailuxe offers travel options to various parts of the world. We have travel routes to the Mediterranean, the Caribbean, Asia, and many other regions.</p>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            How does the yacht rental process work?                          </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Renting a yacht with Sailuxe is straightforward. Choose a yacht that fits your needs, make a reservation, and let us handle everything for your journey. Our customer-centric approach ensures assistance at every step.</div>
                         </div>
                       </div>
 
-                      <div class="question-container">
-                        <div class="question">
-                          <p>What are the yacht rental prices?</p>
-                          <button class="toggle-answer">+</button>
-                        </div>
-                        <div class="answer">
-                            <p>Prices vary based on the chosen yacht's specifications, travel duration, and route. We offer various packages to provide customers with flexible and suitable pricing options.</p>
-                        </div>
-                      </div>
-
-                      <div class="question-container">
-                        <div class="question">
-                          <p>Can I make additional requests during the journey?</p>
-                          <button class="toggle-answer">+</button>
-                        </div>
-                        <div class="answer">
-                            <p>Absolutely! Sailuxe offers flexible services to accommodate your special requests. You can communicate your preferences for food and beverages, special events, and more.</p>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Does Sailuxe offer crew services?
+                          </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Yes, Sailuxe provides professional crews for every journey. Our experienced teams ensure your comfort and safety throughout the trip.</div>
                         </div>
                       </div>
 
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            What destinations can I travel to with Sailuxe?
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Sailuxe offers travel options to various parts of the world. We have travel routes to the Mediterranean, the Caribbean, Asia, and many other regions.</div>
+                        </div>
+                      </div>
+
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            What are the yacht rental prices?
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Yes, Sailuxe provides professional crews for every journey. Our experienced teams ensure your comfort and safety throughout the trip.</div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                            Can I make additional requests during the journey?
+                          </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Absolutely! Sailuxe offers flexible services to accommodate your special requests. You can communicate your preferences for food and beverages, special events, and more.</div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </section>
@@ -199,131 +205,131 @@
        </section>
       
     </main>
-
+    
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="sailuxelogo">
-                        <img src="./assets/img/sailuxe-logo-3.png" alt="">
-                    </div>
-                </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <div class="sailuxelogo">
+                      <img src="./assets/img/sailuxe-logo-3.png" alt="">
+                  </div>
+              </div>
 
-                <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <div class="advantages">
-                        <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213429.png" alt=""></a>
-                        <div class="advantagestext">
-                            <h5>+123 456 78 90 01</h5>
-                            <p>Customer Service</p>
-                        </div>
-                    </div>
-                 </div>
+              <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                  <div class="advantages">
+                      <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213429.png" alt=""></a>
+                      <div class="advantagestext">
+                          <h5>+123 456 78 90 01</h5>
+                          <p>Customer Service</p>
+                      </div>
+                  </div>
+               </div>
 
-                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <div class="advantages">
-                        <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213443.png" alt=""></a>
-                        <div class="advantagestext">
-                            <h5>+123 456 78 90 01</h5>
-                            <p>Call Center</p>
-                        </div>
-                     
-                    </div>
-                 </div>
+               <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                  <div class="advantages">
+                      <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213443.png" alt=""></a>
+                      <div class="advantagestext">
+                          <h5>+123 456 78 90 01</h5>
+                          <p>Call Center</p>
+                      </div>
+                   
+                  </div>
+               </div>
 
-                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <div class="advantages">
-                        <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213455.png" alt=""></a>
-                        <div class="advantagestext">
-                            <h5>example@example.com</h5>
-                            <p>Information and Suggestion</p>
-                        </div>
-             
-                    </div>
-                 </div>
+               <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                  <div class="advantages">
+                      <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213455.png" alt=""></a>
+                      <div class="advantagestext">
+                          <h5>example@example.com</h5>
+                          <p>Information and Suggestion</p>
+                      </div>
+           
+                  </div>
+               </div>
 
-                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <div class="expertise">
-                        <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213511.png" alt=""></a>
-                        <div class="advantagestext">
-                            <h5>Example St. New Jersey</h5>
-                            <p>Visit Us</p>
-                        </div>
+               <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                  <div class="expertise">
+                      <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213511.png" alt=""></a>
+                      <div class="advantagestext">
+                          <h5>Example St. New Jersey</h5>
+                          <p>Visit Us</p>
+                      </div>
 
-                    </div>
-                 </div>
+                  </div>
+               </div>
 
-                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <div class="expertise">
-                        <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213547.png" alt=""></a>
-                        <div class="advantagestext">
-                            <h5>Example2 St. New Jersey</h5>
-                            <p>Visit Us</p>
-                        </div>
+               <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                  <div class="expertise">
+                      <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213547.png" alt=""></a>
+                      <div class="advantagestext">
+                          <h5>Example2 St. New Jersey</h5>
+                          <p>Visit Us</p>
+                      </div>
 
-                    </div>
-                 </div>
+                  </div>
+               </div>
 
-                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <div class="advantages">
-                        <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213619.png" alt=""></a>
-                        <div class="advantagestext">
-                            <h5>Example3 St. New Jersey</h5>
-                            <p>Visit Us</p>
-                        </div>
+               <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                  <div class="advantages">
+                      <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213619.png" alt=""></a>
+                      <div class="advantagestext">
+                          <h5>Example3 St. New Jersey</h5>
+                          <p>Visit Us</p>
+                      </div>
 
-                    </div>
-                 </div>
+                  </div>
+               </div>
 
-                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <div class="advantages">
-                        <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213628.png" alt=""></a>
-                        <div class="advantagestext">
-                            <h5>Example4 St. New Jersey</h5>
-                            <p>Visit Us</p>
-                        </div>
+               <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                  <div class="advantages">
+                      <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213628.png" alt=""></a>
+                      <div class="advantagestext">
+                          <h5>Example4 St. New Jersey</h5>
+                          <p>Visit Us</p>
+                      </div>
 
-                    </div>
-                 </div>
+                  </div>
+               </div>
 
-                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <div class="expertise">
-                        <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213701.png" alt=""></a>
-                        <div class="advantagestext">
-                            <h5>Example5 St. New Jersey</h5>
-                            <p>Visit Us</p>
-                        </div>
+               <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                  <div class="expertise">
+                      <a href="#aboutus"><img src="./assets/img/Screenshot 2024-02-02 213701.png" alt=""></a>
+                      <div class="advantagestext">
+                          <h5>Example5 St. New Jersey</h5>
+                          <p>Visit Us</p>
+                      </div>
 
-                    </div>
-                 </div>
+                  </div>
+               </div>
 
-                 <div class="col-12">
-                    <div class="socialnetworks">
-                        <div>
-                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f fa-bounce fa-xl" style="color: #ffffff;"></i></a>
-                        </div>
-                        <div>
-                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-bounce fa-xl" style="color: #ffffff;"></i></a>
-                        </div>
-                        <div>
-                            <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter fa-bounce fa-xl" style="color: #ffffff;"></i></a>
-                        </div>
-                    </div>
-                 </div>
+               <div class="col-12">
+                  <div class="socialnetworks">
+                      <div>
+                          <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f fa-bounce fa-xl" style="color: #ffffff;"></i></a>
+                      </div>
+                      <div>
+                          <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-bounce fa-xl" style="color: #ffffff;"></i></a>
+                      </div>
+                      <div>
+                          <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter fa-bounce fa-xl" style="color: #ffffff;"></i></a>
+                      </div>
+                  </div>
+               </div>
 
-                 <div class="col-12">
-                    <div class="payments">
-                        <img src="./assets/img/patment-icon17.png" alt="payment">
-                    </div>
-                 </div>
+               <div class="col-12">
+                  <div class="payments">
+                      <img src="./assets/img/patment-icon17.png" alt="payment">
+                  </div>
+               </div>
 
-                 <div class="col-12">
-                    <div class="paymentext">
-                        <p>© Sailuxe - All Rights Reserved.</p>
-                    </div>
-                 </div>
-            </div>
-        </div>
-    </footer>
+               <div class="col-12">
+                  <div class="paymentext">
+                      <p>© Sailuxe - All Rights Reserved.</p>
+                  </div>
+               </div>
+          </div>
+      </div>
+  </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

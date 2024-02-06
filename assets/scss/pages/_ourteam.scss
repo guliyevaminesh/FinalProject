@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.aboutushead{
+.teamhead{
     width: 100%;
     display: flex;
     align-items: center;
@@ -102,26 +102,37 @@
     span{
         font-size: 20px;
     }
-    .dashboard{
-        img{
-            width: 60px;
-        }
-        background-color: #018498;
-        border: none;
-        outline: none;
-        width: 190px;
-        height: 70px;
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 30px;
-        border-radius: 5px;
-        span{
-            color: white;
-            font-weight: 500;
-        }
+}
+@media screen and (max-width: 660px) {
+    .dashboard {
+        display: none !important;
     }
+
+    .canvasbtn {
+        display: none;
+    }
+}
+
+.dashboard {
+    img {
+        width: 60px;
+    }
+    background-color: #018498;
+    border: none;
+    outline: none;
+    width: 190px;
+    height: 70px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.dashboard span {
+    color: white;
+    font-weight: 500;
 }
 
 .hover-content {

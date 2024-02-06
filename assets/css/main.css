@@ -99,7 +99,13 @@ header .socialnetwork .socialnetworkicon {
 header span {
   font-size: 20px;
 }
-header .dashboard {
+
+@media screen and (max-width: 660px) {
+  .canvasbtn {
+    display: none;
+  }
+}
+.dashboard {
   background-color: #018498;
   border: none;
   outline: none;
@@ -112,12 +118,29 @@ header .dashboard {
   margin-left: 30px;
   border-radius: 5px;
 }
-header .dashboard img {
+.dashboard img {
   width: 60px;
 }
-header .dashboard span {
+
+.dashboard span {
   color: white;
   font-weight: 500;
+}
+
+/* Hide the dashboard button when viewport width is less than or equal to 560px */
+@media screen and (max-width: 660px) {
+  .dashboard {
+    display: none;
+  }
+}
+.navbar-toggler {
+  background-color: white; /* Button rengini beyaz yapar */
+  /* Diğer stillendirme özellikleri */
+}
+
+.navbar-toggler-icon {
+  color: black; /* İkon rengini siyah yapar */
+  /* Diğer stillendirme özellikleri */
 }
 
 .hover-content {
@@ -158,6 +181,42 @@ header .dashboard span {
 #beyondhorizons {
   width: 100%;
   position: relative;
+}
+
+#carouselExampleControls h1 {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white; /* Yazı rengi ayarlamak isterseniz */
+}
+
+#carouselExampleControls p {
+  position: absolute;
+  top: 40%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white; /* Yazı rengi ayarlamak isterseniz */
+}
+
+#carouselExampleControls button {
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  border: none;
+  background-color: #018498;
+  width: 170px;
+  height: 60px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+#carouselExampleControls button:hover {
+  background-color: #094149;
 }
 
 * {
@@ -263,7 +322,16 @@ header .dashboard span {
 .aboutushead span {
   font-size: 20px;
 }
-.aboutushead .dashboard {
+
+@media screen and (max-width: 660px) {
+  .dashboard {
+    display: none !important;
+  }
+  .canvasbtn {
+    display: none;
+  }
+}
+.dashboard {
   background-color: #018498;
   border: none;
   outline: none;
@@ -276,10 +344,11 @@ header .dashboard span {
   margin-left: 30px;
   border-radius: 5px;
 }
-.aboutushead .dashboard img {
+.dashboard img {
   width: 60px;
 }
-.aboutushead .dashboard span {
+
+.dashboard span {
   color: white;
   font-weight: 500;
 }
@@ -634,7 +703,7 @@ footer .container .row .paymentext {
   box-sizing: border-box;
 }
 
-.aboutushead {
+.teamhead {
   width: 100%;
   display: flex;
   align-items: center;
@@ -643,40 +712,40 @@ footer .container .row .paymentext {
   position: absolute;
   z-index: 1;
 }
-.aboutushead nav {
+.teamhead nav {
   width: 80%;
 }
-.aboutushead nav img {
+.teamhead nav img {
   width: 240px;
 }
-.aboutushead nav .collapseDiv {
+.teamhead nav .collapseDiv {
   justify-content: flex-end;
 }
-.aboutushead nav .collapseDiv ul {
+.teamhead nav .collapseDiv ul {
   display: flex;
   gap: 15px;
 }
-.aboutushead nav .collapseDiv ul li a {
+.teamhead nav .collapseDiv ul li a {
   font-weight: 700;
   color: black !important;
   font-size: 14px;
 }
-.aboutushead nav .collapseDiv ul li a:hover {
+.teamhead nav .collapseDiv ul li a:hover {
   background-color: #018498;
   color: white !important;
   width: 100%;
   border-radius: 5px;
 }
-.aboutushead .canvasbtn {
+.teamhead .canvasbtn {
   background-color: transparent;
   border: none;
   font-size: 20px;
 }
-.aboutushead .canvasbtn:hover {
+.teamhead .canvasbtn:hover {
   background-color: transparent;
   border: none;
 }
-.aboutushead .information {
+.teamhead .information {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -684,12 +753,12 @@ footer .container .row .paymentext {
   padding-top: 20px;
   gap: 30px;
 }
-.aboutushead .information h2 {
+.teamhead .information h2 {
   color: black;
   font-weight: 700;
   font-size: 28px;
 }
-.aboutushead .information .contact {
+.teamhead .information .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -697,12 +766,12 @@ footer .container .row .paymentext {
   text-align: center;
   margin-bottom: 10px;
 }
-.aboutushead .information .contact span {
+.teamhead .information .contact span {
   font-weight: 450;
   color: black;
   font-size: 20px;
 }
-.aboutushead .information .contact .contacticon {
+.teamhead .information .contact .contacticon {
   background-color: #018498;
   width: 90px;
   height: 80px;
@@ -714,7 +783,7 @@ footer .container .row .paymentext {
   margin-bottom: 12px;
   margin-top: 15px;
 }
-.aboutushead .socialnetwork {
+.teamhead .socialnetwork {
   display: flex;
   gap: 7px;
   align-items: center;
@@ -722,16 +791,25 @@ footer .container .row .paymentext {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.aboutushead .socialnetwork .socialnetworkicon {
+.teamhead .socialnetwork .socialnetworkicon {
   border: 1px solid #018498;
   padding: 15px;
   background-color: transparent;
   border-radius: 5px;
 }
-.aboutushead span {
+.teamhead span {
   font-size: 20px;
 }
-.aboutushead .dashboard {
+
+@media screen and (max-width: 660px) {
+  .dashboard {
+    display: none !important;
+  }
+  .canvasbtn {
+    display: none;
+  }
+}
+.dashboard {
   background-color: #018498;
   border: none;
   outline: none;
@@ -744,10 +822,11 @@ footer .container .row .paymentext {
   margin-left: 30px;
   border-radius: 5px;
 }
-.aboutushead .dashboard img {
+.dashboard img {
   width: 60px;
 }
-.aboutushead .dashboard span {
+
+.dashboard span {
   color: white;
   font-weight: 500;
 }
@@ -1113,7 +1192,7 @@ footer .container .row .paymentext {
   box-sizing: border-box;
 }
 
-.aboutushead {
+.getinformationhead {
   width: 100%;
   display: flex;
   align-items: center;
@@ -1122,40 +1201,40 @@ footer .container .row .paymentext {
   position: absolute;
   z-index: 1;
 }
-.aboutushead nav {
+.getinformationhead nav {
   width: 80%;
 }
-.aboutushead nav img {
+.getinformationhead nav img {
   width: 240px;
 }
-.aboutushead nav .collapseDiv {
+.getinformationhead nav .collapseDiv {
   justify-content: flex-end;
 }
-.aboutushead nav .collapseDiv ul {
+.getinformationhead nav .collapseDiv ul {
   display: flex;
   gap: 15px;
 }
-.aboutushead nav .collapseDiv ul li a {
+.getinformationhead nav .collapseDiv ul li a {
   font-weight: 700;
   color: black !important;
   font-size: 14px;
 }
-.aboutushead nav .collapseDiv ul li a:hover {
+.getinformationhead nav .collapseDiv ul li a:hover {
   background-color: #018498;
   color: white !important;
   width: 100%;
   border-radius: 5px;
 }
-.aboutushead .canvasbtn {
+.getinformationhead .canvasbtn {
   background-color: transparent;
   border: none;
   font-size: 20px;
 }
-.aboutushead .canvasbtn:hover {
+.getinformationhead .canvasbtn:hover {
   background-color: transparent;
   border: none;
 }
-.aboutushead .information {
+.getinformationhead .information {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1163,12 +1242,12 @@ footer .container .row .paymentext {
   padding-top: 20px;
   gap: 30px;
 }
-.aboutushead .information h2 {
+.getinformationhead .information h2 {
   color: black;
   font-weight: 700;
   font-size: 28px;
 }
-.aboutushead .information .contact {
+.getinformationhead .information .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1176,12 +1255,12 @@ footer .container .row .paymentext {
   text-align: center;
   margin-bottom: 10px;
 }
-.aboutushead .information .contact span {
+.getinformationhead .information .contact span {
   font-weight: 450;
   color: black;
   font-size: 20px;
 }
-.aboutushead .information .contact .contacticon {
+.getinformationhead .information .contact .contacticon {
   background-color: #018498;
   width: 90px;
   height: 80px;
@@ -1193,7 +1272,7 @@ footer .container .row .paymentext {
   margin-bottom: 12px;
   margin-top: 15px;
 }
-.aboutushead .socialnetwork {
+.getinformationhead .socialnetwork {
   display: flex;
   gap: 7px;
   align-items: center;
@@ -1201,16 +1280,25 @@ footer .container .row .paymentext {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.aboutushead .socialnetwork .socialnetworkicon {
+.getinformationhead .socialnetwork .socialnetworkicon {
   border: 1px solid #018498;
   padding: 15px;
   background-color: transparent;
   border-radius: 5px;
 }
-.aboutushead span {
+.getinformationhead span {
   font-size: 20px;
 }
-.aboutushead .dashboard {
+
+@media screen and (max-width: 660px) {
+  .dashboard {
+    display: none !important;
+  }
+  .canvasbtn {
+    display: none;
+  }
+}
+.dashboard {
   background-color: #018498;
   border: none;
   outline: none;
@@ -1223,10 +1311,11 @@ footer .container .row .paymentext {
   margin-left: 30px;
   border-radius: 5px;
 }
-.aboutushead .dashboard img {
+.dashboard img {
   width: 60px;
 }
-.aboutushead .dashboard span {
+
+.dashboard span {
   color: white;
   font-weight: 500;
 }
@@ -1548,7 +1637,7 @@ footer .container .row .paymentext {
   box-sizing: border-box;
 }
 
-.aboutushead {
+.faqhead {
   width: 100%;
   display: flex;
   align-items: center;
@@ -1557,40 +1646,40 @@ footer .container .row .paymentext {
   position: absolute;
   z-index: 1;
 }
-.aboutushead nav {
+.faqhead nav {
   width: 80%;
 }
-.aboutushead nav img {
+.faqhead nav img {
   width: 240px;
 }
-.aboutushead nav .collapseDiv {
+.faqhead nav .collapseDiv {
   justify-content: flex-end;
 }
-.aboutushead nav .collapseDiv ul {
+.faqhead nav .collapseDiv ul {
   display: flex;
   gap: 15px;
 }
-.aboutushead nav .collapseDiv ul li a {
+.faqhead nav .collapseDiv ul li a {
   font-weight: 700;
   color: black !important;
   font-size: 14px;
 }
-.aboutushead nav .collapseDiv ul li a:hover {
+.faqhead nav .collapseDiv ul li a:hover {
   background-color: #018498;
   color: white !important;
   width: 100%;
   border-radius: 5px;
 }
-.aboutushead .canvasbtn {
+.faqhead .canvasbtn {
   background-color: transparent;
   border: none;
   font-size: 20px;
 }
-.aboutushead .canvasbtn:hover {
+.faqhead .canvasbtn:hover {
   background-color: transparent;
   border: none;
 }
-.aboutushead .information {
+.faqhead .information {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1598,12 +1687,12 @@ footer .container .row .paymentext {
   padding-top: 20px;
   gap: 30px;
 }
-.aboutushead .information h2 {
+.faqhead .information h2 {
   color: black;
   font-weight: 700;
   font-size: 28px;
 }
-.aboutushead .information .contact {
+.faqhead .information .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1611,12 +1700,12 @@ footer .container .row .paymentext {
   text-align: center;
   margin-bottom: 10px;
 }
-.aboutushead .information .contact span {
+.faqhead .information .contact span {
   font-weight: 450;
   color: black;
   font-size: 20px;
 }
-.aboutushead .information .contact .contacticon {
+.faqhead .information .contact .contacticon {
   background-color: #018498;
   width: 90px;
   height: 80px;
@@ -1628,7 +1717,7 @@ footer .container .row .paymentext {
   margin-bottom: 12px;
   margin-top: 15px;
 }
-.aboutushead .socialnetwork {
+.faqhead .socialnetwork {
   display: flex;
   gap: 7px;
   align-items: center;
@@ -1636,16 +1725,25 @@ footer .container .row .paymentext {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.aboutushead .socialnetwork .socialnetworkicon {
+.faqhead .socialnetwork .socialnetworkicon {
   border: 1px solid #018498;
   padding: 15px;
   background-color: transparent;
   border-radius: 5px;
 }
-.aboutushead span {
+.faqhead span {
   font-size: 20px;
 }
-.aboutushead .dashboard {
+
+@media screen and (max-width: 660px) {
+  .dashboard {
+    display: none !important;
+  }
+  .canvasbtn {
+    display: none;
+  }
+}
+.dashboard {
   background-color: #018498;
   border: none;
   outline: none;
@@ -1658,10 +1756,11 @@ footer .container .row .paymentext {
   margin-left: 30px;
   border-radius: 5px;
 }
-.aboutushead .dashboard img {
+.dashboard img {
   width: 60px;
 }
-.aboutushead .dashboard span {
+
+.dashboard span {
   color: white;
   font-weight: 500;
 }
@@ -1781,45 +1880,9 @@ footer .container .row .paymentext {
   font-size: 14px;
 }
 
-.question-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.question {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: transparent;
-  padding: 5px;
-  border-radius: 8px;
-}
-.question p {
-  color: black;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.toggle-answer {
-  cursor: pointer;
-  font-size: 16px;
-  border: none;
-  background-color: transparent;
-}
-
-.answer {
-  display: none;
-  background-color: transparent;
-  padding: 10px;
-  border-radius: 8px;
-}
-.answer p {
-  color: black;
-  font-weight: 500;
-  font-size: 14px;
-  background-color: transparent;
-  padding: 5px;
-  box-shadow: 5px 10px 15px 0px rgba(1, 132, 152, 0.5);
+.accordion-button:focus {
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
 
 footer {
@@ -1876,6 +1939,1347 @@ footer .container .row .expertise {
   border-radius: 5px;
   margin-bottom: 30px;
   height: 180px;
+}
+footer .container .row .expertise img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .socialnetworks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+footer .container .row .socialnetworks div {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+footer .container .row .socialnetworks div:hover {
+  background-color: #018498;
+}
+footer .container .row .payments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+footer .container .row .paymentext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dashboardhead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+  position: absolute;
+  z-index: 1;
+}
+.dashboardhead nav {
+  width: 80%;
+}
+.dashboardhead nav img {
+  width: 240px;
+}
+.dashboardhead nav .collapseDiv {
+  justify-content: flex-end;
+}
+.dashboardhead nav .collapseDiv ul {
+  display: flex;
+  gap: 15px;
+}
+.dashboardhead nav .collapseDiv ul li a {
+  font-weight: 700;
+  color: black !important;
+  font-size: 14px;
+}
+.dashboardhead nav .collapseDiv ul li a:hover {
+  background-color: #018498;
+  color: white !important;
+  width: 100%;
+  border-radius: 5px;
+}
+.dashboardhead .canvasbtn {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+.dashboardhead .canvasbtn:hover {
+  background-color: transparent;
+  border: none;
+}
+.dashboardhead .information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 30px;
+}
+.dashboardhead .information h2 {
+  color: black;
+  font-weight: 700;
+  font-size: 28px;
+}
+.dashboardhead .information .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.dashboardhead .information .contact span {
+  font-weight: 450;
+  color: black;
+  font-size: 20px;
+}
+.dashboardhead .information .contact .contacticon {
+  background-color: #018498;
+  width: 90px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  margin-top: 15px;
+}
+.dashboardhead .socialnetwork {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.dashboardhead .socialnetwork .socialnetworkicon {
+  border: 1px solid #018498;
+  padding: 15px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.dashboardhead span {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 660px) {
+  .dashboard {
+    display: none !important;
+  }
+  .canvasbtn {
+    display: none;
+  }
+}
+.dashboard {
+  background-color: #018498;
+  border: none;
+  outline: none;
+  width: 190px;
+  height: 70px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+.dashboard img {
+  width: 60px;
+}
+
+.dashboard span {
+  color: white;
+  font-weight: 500;
+}
+
+.hover-content {
+  display: none;
+  position: absolute;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 5px;
+}
+.hover-content .about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  color: black !important;
+  padding-right: 15px;
+}
+.hover-content .about a {
+  color: black !important;
+}
+.hover-content .about a:hover {
+  color: white !important;
+  background-color: #018498;
+  padding: 7px;
+  width: auto;
+  border-radius: 3px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.nav-item:hover .hover-content {
+  display: block;
+}
+
+#getinformation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/assets/img/header-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 30px;
+}
+#getinformation .container {
+  margin: 30px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#getinformation .container .row {
+  margin: 30px;
+  padding: 30px;
+}
+#getinformation .container .row .getinformationtext {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+#getinformation .container .row .getinformationtext h1 {
+  color: black;
+  font-weight: 700;
+}
+#getinformation .container .row .getinformationtext a {
+  text-decoration: none;
+  color: black;
+}
+
+#dashboardForm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#dashboardForm .container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#dashboardForm .container #loginForm {
+  width: 50%;
+  background-color: #F4F4F4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 3px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+}
+#dashboardForm .container #loginForm h5 {
+  color: black;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+#dashboardForm .container #loginForm .dashboardInputs {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-bottom: 10px;
+}
+#dashboardForm .container #loginForm .dashboardInputs .usericon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgb(119, 116, 116);
+  height: 30px;
+  padding: 10px;
+}
+#dashboardForm .container #loginForm .dashboardInputs #username {
+  width: 100% !important;
+  border: none;
+  height: 30px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  padding-left: 20px;
+  padding-top: 12px;
+  outline: none;
+}
+#dashboardForm .container #loginForm .dashboardInputs #password {
+  width: 100% !important;
+  border: none;
+  height: 30px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  padding-left: 20px;
+  padding-top: 12px;
+  outline: none;
+}
+#dashboardForm .container #loginForm .dashboardcheck {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#dashboardForm .container #loginForm #loginbutton {
+  width: 150px;
+  height: 60px;
+  background-color: #018498;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 30px;
+}
+#dashboardForm .container #loginForm #loginbutton:hover {
+  background-color: #065662;
+}
+#dashboardForm .container #registerForm {
+  display: none;
+  width: 80%;
+}
+#dashboardForm .container #registerForm .myform {
+  width: 50%;
+  background-color: #F4F4F4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 3px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+}
+#dashboardForm .container #registerForm .myform h5 {
+  color: black;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+#dashboardForm .container #registerForm .myform .dashboardInputs {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-bottom: 10px;
+}
+#dashboardForm .container #registerForm .myform .dashboardInputs .usericon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgb(119, 116, 116);
+  height: 30px;
+  padding: 10px;
+}
+#dashboardForm .container #registerForm .myform .dashboardInputs #username {
+  width: 100% !important;
+  border: none;
+  height: 30px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  padding-left: 20px;
+  padding-top: 12px;
+  outline: none;
+}
+#dashboardForm .container #registerForm .myform .dashboardInputs #password {
+  width: 100% !important;
+  border: none;
+  height: 30px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  padding-left: 20px;
+  padding-top: 12px;
+  outline: none;
+}
+#dashboardForm .container #registerForm .myform .dashboardInputs #email {
+  width: 100% !important;
+  border: none;
+  height: 30px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  padding-left: 20px;
+  padding-top: 12px;
+  outline: none;
+}
+#dashboardForm .container #registerForm .myform .dashboardcheck {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#dashboardForm .container #registerForm .myform #registerbutton {
+  width: 150px;
+  height: 60px;
+  background-color: #018498;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 30px;
+}
+#dashboardForm .container #registerForm .myform #registerbutton:hover {
+  background-color: #065662;
+}
+
+#sailuxeadvantages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  opacity: 0;
+}
+
+#sailuxeadvantages.show {
+  opacity: 1;
+}
+
+.advantages,
+.expertise {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.advantages.show,
+.expertise.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  background: linear-gradient(rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7)), url("/assets/img/footer-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+footer .container .row .sailuxelogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+footer .container .row .sailuxelogo img {
+  max-width: 100%;
+}
+footer .container .row .advantages {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+footer .container .row .advantages img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .expertise {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  height: 180px;
+}
+footer .container .row .expertise img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .socialnetworks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+footer .container .row .socialnetworks div {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+footer .container .row .socialnetworks div:hover {
+  background-color: #018498;
+}
+footer .container .row .payments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+footer .container .row .paymentext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.aboutushead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+  position: absolute;
+  z-index: 1;
+}
+.aboutushead nav {
+  width: 80%;
+}
+.aboutushead nav img {
+  width: 240px;
+}
+.aboutushead nav .collapseDiv {
+  justify-content: flex-end;
+}
+.aboutushead nav .collapseDiv ul {
+  display: flex;
+  gap: 15px;
+}
+.aboutushead nav .collapseDiv ul li a {
+  font-weight: 700;
+  color: black !important;
+  font-size: 14px;
+}
+.aboutushead nav .collapseDiv ul li a:hover {
+  background-color: #018498;
+  color: white !important;
+  width: 100%;
+  border-radius: 5px;
+}
+.aboutushead .canvasbtn {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+.aboutushead .canvasbtn:hover {
+  background-color: transparent;
+  border: none;
+}
+.aboutushead .information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 30px;
+}
+.aboutushead .information h2 {
+  color: black;
+  font-weight: 700;
+  font-size: 28px;
+}
+.aboutushead .information .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.aboutushead .information .contact span {
+  font-weight: 450;
+  color: black;
+  font-size: 20px;
+}
+.aboutushead .information .contact .contacticon {
+  background-color: #018498;
+  width: 90px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  margin-top: 15px;
+}
+.aboutushead .socialnetwork {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.aboutushead .socialnetwork .socialnetworkicon {
+  border: 1px solid #018498;
+  padding: 15px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.aboutushead span {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 660px) {
+  .dashboard {
+    display: none !important;
+  }
+  .canvasbtn {
+    display: none;
+  }
+}
+.dashboard {
+  background-color: #018498;
+  border: none;
+  outline: none;
+  width: 190px;
+  height: 70px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+.dashboard img {
+  width: 60px;
+}
+
+.dashboard span {
+  color: white;
+  font-weight: 500;
+}
+
+.hover-content {
+  display: none;
+  position: absolute;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 5px;
+}
+.hover-content .about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  color: black !important;
+  padding-right: 15px;
+}
+.hover-content .about a {
+  color: black !important;
+}
+.hover-content .about a:hover {
+  color: white !important;
+  background-color: #018498;
+  padding: 7px;
+  width: auto;
+  border-radius: 3px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.nav-item:hover .hover-content {
+  display: block;
+}
+
+#whychooseus {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/assets/img/header-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 30px;
+}
+#whychooseus .whychooseuscontainer {
+  margin: 30px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#whychooseus .whychooseuscontainer .row {
+  margin: 30px;
+  padding: 30px;
+}
+#whychooseus .whychooseuscontainer .row .whychooseustext {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+#whychooseus .whychooseuscontainer .row .whychooseustext h1 {
+  color: black;
+  font-weight: 700;
+}
+#whychooseus .whychooseuscontainer .row .whychooseustext a {
+  text-decoration: none;
+  color: black;
+}
+
+#sailuxeadvantages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  opacity: 0;
+}
+#sailuxeadvantages .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sailuxeadvantages .container .row .sailuxeadvantagestext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: black;
+}
+#sailuxeadvantages .container .row .sailuxeadvantagestext h3 {
+  font-weight: 700;
+}
+#sailuxeadvantages .container .row .sailuxeadvantagestext span {
+  font-weight: 500;
+}
+#sailuxeadvantages .container .row .advantages {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+#sailuxeadvantages .container .row .advantages img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#sailuxeadvantages .container .row .advantages .advantagestext:hover {
+  background-color: white;
+  width: 100%;
+  color: #018498;
+  border: 1px solid #018498;
+}
+#sailuxeadvantages .container .row .expertise {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  height: 194px;
+}
+#sailuxeadvantages .container .row .expertise img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#sailuxeadvantages .container .row .expertise .advantagestext:hover {
+  background-color: white;
+  width: 100%;
+  color: #018498;
+  border: 1px solid #018498;
+  height: 115px;
+}
+
+#sailuxeadvantages.show {
+  opacity: 1;
+}
+
+.advantages,
+.expertise {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.advantages.show,
+.expertise.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s; /* İstediğiniz gecikme süresini ayarlayın */
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  background: linear-gradient(rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7)), url("/assets/img/footer-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+footer .container .row .sailuxelogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+footer .container .row .sailuxelogo img {
+  max-width: 100%;
+}
+footer .container .row .advantages {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+footer .container .row .advantages img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .expertise {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  height: 194px;
+}
+footer .container .row .expertise img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .socialnetworks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+footer .container .row .socialnetworks div {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+footer .container .row .socialnetworks div:hover {
+  background-color: #018498;
+}
+footer .container .row .payments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+footer .container .row .paymentext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contacthead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+  position: absolute;
+  z-index: 1;
+}
+.contacthead nav {
+  width: 80%;
+}
+.contacthead nav img {
+  width: 240px;
+}
+.contacthead nav .collapseDiv {
+  justify-content: flex-end;
+}
+.contacthead nav .collapseDiv ul {
+  display: flex;
+  gap: 15px;
+}
+.contacthead nav .collapseDiv ul li a {
+  font-weight: 700;
+  color: black !important;
+  font-size: 14px;
+}
+.contacthead nav .collapseDiv ul li a:hover {
+  background-color: #018498;
+  color: white !important;
+  width: 100%;
+  border-radius: 5px;
+}
+.contacthead .canvasbtn {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+.contacthead .canvasbtn:hover {
+  background-color: transparent;
+  border: none;
+}
+.contacthead .information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 30px;
+}
+.contacthead .information h2 {
+  color: black;
+  font-weight: 700;
+  font-size: 28px;
+}
+.contacthead .information .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.contacthead .information .contact span {
+  font-weight: 450;
+  color: black;
+  font-size: 20px;
+}
+.contacthead .information .contact .contacticon {
+  background-color: #018498;
+  width: 90px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  margin-top: 15px;
+}
+.contacthead .socialnetwork {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.contacthead .socialnetwork .socialnetworkicon {
+  border: 1px solid #018498;
+  padding: 15px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.contacthead span {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 660px) {
+  .dashboard {
+    display: none !important;
+  }
+  .canvasbtn {
+    display: none;
+  }
+}
+.dashboard {
+  background-color: #018498;
+  border: none;
+  outline: none;
+  width: 190px;
+  height: 70px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+.dashboard img {
+  width: 60px;
+}
+
+.dashboard span {
+  color: white;
+  font-weight: 500;
+}
+
+.hover-content {
+  display: none;
+  position: absolute;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 5px;
+}
+.hover-content .about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  color: black !important;
+  padding-right: 15px;
+}
+.hover-content .about a {
+  color: black !important;
+}
+.hover-content .about a:hover {
+  color: white !important;
+  background-color: #018498;
+  padding: 7px;
+  width: auto;
+  border-radius: 3px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.nav-item:hover .hover-content {
+  display: block;
+}
+
+#whychooseus {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/assets/img/header-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 30px;
+}
+#whychooseus .whychooseuscontainer {
+  margin: 30px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#whychooseus .whychooseuscontainer .row {
+  margin: 30px;
+  padding: 30px;
+}
+#whychooseus .whychooseuscontainer .row .whychooseustext {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+#whychooseus .whychooseuscontainer .row .whychooseustext h1 {
+  color: black;
+  font-weight: 700;
+}
+#whychooseus .whychooseuscontainer .row .whychooseustext a {
+  text-decoration: none;
+  color: black;
+}
+
+#connection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#connection .container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#connection .container .row .connectiontools {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease; /* Geçiş efekti */
+}
+#connection .container .row .connectiontools img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+#connection .container .row #contactform {
+  margin-top: 30px;
+}
+#connection .container .row #contactform .row #fullname {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.1);
+  border-bottom: 2px solid #018498;
+  outline: none;
+}
+#connection .container .row #contactform .row #emailaddress {
+  height: 60px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.1);
+  border-bottom: 2px solid #018498;
+  outline: none;
+}
+#connection .container .row #contactform .row #phonenumber {
+  height: 60px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.1);
+  border-bottom: 2px solid #018498;
+  outline: none;
+}
+#connection .container .row #contactform .row #yourdescription {
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.6);
+  border-bottom: 2px solid #018498;
+  outline: none;
+  padding-top: 15px;
+  margin-top: 30px;
+}
+#connection .container .row #contactform #sendform {
+  width: 150px;
+  height: 50px;
+  background-color: #018498;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+}
+#connection .container .row #contactform #sendform:hover {
+  background-color: #074a55;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Forma animasyon uygulama */
+#contactform {
+  animation: slideDown 0.9s ease forwards;
+}
+
+/* Form içindeki elemanlara animasyon uygulama */
+#contactform .col {
+  animation: slideDown 0.9s ease forwards;
+}
+
+#connection .row .connectiontools:hover {
+  transform: translate(-5px, -5px); /* Yukarı sağ tarafa kaydırma */
+}
+
+#sailuxeadvantages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  opacity: 0;
+}
+
+#sailuxeadvantages.show {
+  opacity: 1;
+}
+
+.advantages,
+.expertise {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.advantages.show,
+.expertise.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s; /* İstediğiniz gecikme süresini ayarlayın */
+}
+
+#googleMap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#googleMap iframe {
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  background: linear-gradient(rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7)), url("/assets/img/footer-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+footer .container .row .sailuxelogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+footer .container .row .sailuxelogo img {
+  max-width: 100%;
+}
+footer .container .row .advantages {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+footer .container .row .advantages img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .expertise {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  height: 194px;
 }
 footer .container .row .expertise img {
   width: 80px;
