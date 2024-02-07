@@ -181,42 +181,454 @@ header span {
 #beyondhorizons {
   width: 100%;
   position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/img/slider-sailuxe-6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-#carouselExampleControls h1 {
-  position: absolute;
-  top: 30%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  color: white; /* Yazı rengi ayarlamak isterseniz */
+#beyondhorizons .container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-
-#carouselExampleControls p {
-  position: absolute;
-  top: 40%;
-  left: 31%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  color: white; /* Yazı rengi ayarlamak isterseniz */
+#beyondhorizons .container .row {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-
-#carouselExampleControls button {
-  position: absolute;
-  top: 50%;
-  left: 17%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+#beyondhorizons .container .row .horizonstext {
+  width: 50%;
   color: white;
-  border: none;
-  background-color: #018498;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#beyondhorizons .container .row .horizonstext h1 {
+  font-weight: 700;
+}
+#beyondhorizons .container .row .horizonstext p {
+  font-size: 12px;
+}
+#beyondhorizons .container .row .horizonstext button {
   width: 170px;
   height: 60px;
-  border-radius: 2px;
+  background-color: #018498;
+  color: white;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+}
+#beyondhorizons .container .row .horizonstext button:hover {
+  background-color: #0a4852;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.horizonstext > * {
+  animation: slideInFromLeft 0.9s ease forwards;
+}
+
+/* İçeriklerin gecikmeli olarak gelmesi için farklı animasyon gecikme değerleri uygulanabilir */
+.horizonstext > *:nth-child(1) {
+  animation-delay: 0.9s;
+}
+
+.horizonstext > *:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+.horizonstext > *:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+#luxuryachting {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 100px;
+}
+#luxuryachting .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#luxuryachting .container .row .luxuryachts {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 250px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  color: white;
+}
+#luxuryachting .container .row .luxuryachts img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+#luxuryachting .container .row .luxuryachts h6 {
+  color: white;
   font-weight: 600;
 }
-#carouselExampleControls button:hover {
-  background-color: #094149;
+
+#unveilingsailuxe {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#unveilingsailuxe .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#unveilingsailuxe .container .row .unveilingtext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#unveilingsailuxe .container .row .unveilingyachts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 7px;
+}
+#unveilingsailuxe .container .row .unveilingyachts img {
+  max-width: 100%;
+}
+
+.unveilingtext h3 {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s ease, transform 0.7s ease;
+}
+
+.unveilingtext.show h3 {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#seascollaboration {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 30px;
+}
+#seascollaboration .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#seascollaboration .container .row .collaborationtext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: black;
+}
+#seascollaboration .container .row .collaborationtext h3 {
+  font-weight: 700;
+}
+#seascollaboration .container .row .collaborationtext span {
+  font-weight: 500;
+}
+#seascollaboration .container .row .collaborationphoto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collaborationphoto img {
+  max-width: 100%;
+  filter: grayscale(100%); /* Başlangıçta gri tonlama */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.collaborationphoto:hover img {
+  filter: grayscale(0%); /* Hover olduğunda gri tonlamayı kaldır (renkli hale getir) */
+  transform: translateY(-5px); /* Hover olduğunda 10px yukarı kaldır */
+}
+
+.collaborationtext h3 {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s ease, transform 0.7s ease;
+}
+
+.collaborationtext.show h3 {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#bespokeadventure {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 30px;
+}
+#bespokeadventure .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#bespokeadventure .container .row .experiences {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+#bespokeadventure .container .row .experiences h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#bespokeadventure .container .row .experiences #experiencesform .row #fullname {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 60px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.6);
+  border-bottom: 2px solid #018498;
+  outline: none;
+}
+#bespokeadventure .container .row .experiences #experiencesform .row #emailaddress {
+  width: 160px;
+  height: 60px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.6);
+  border-bottom: 2px solid #018498;
+  outline: none;
+}
+#bespokeadventure .container .row .experiences #experiencesform .row #phonenumber {
+  width: 160px;
+  height: 60px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.6);
+  border-bottom: 2px solid #018498;
+  outline: none;
+}
+#bespokeadventure .container .row .experiences #experiencesform .row #yourdescription {
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.6);
+  border-bottom: 2px solid #018498;
+  outline: none;
+  padding-top: 15px;
+  margin-top: 30px;
+}
+#bespokeadventure .container .row .experiences #experiencesform #sendform {
+  width: 150px;
+  height: 50px;
+  background-color: #018498;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+}
+#bespokeadventure .container .row .experiences #experiencesform #sendform:hover {
+  background-color: #074a55;
+}
+#bespokeadventure .container .row .adventurecontact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#bespokeadventure .container .row .adventurecontact .contactus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#bespokeadventure .container .row .adventurecontact .contactus img {
+  width: 80px;
+}
+
+.experiences {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#bespokeHeader,
+#experiencesform {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.adventurecontact {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#bespokeHeader.show,
+#experiencesform.show,
+.adventurecontact.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#sailuxeadvantages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  opacity: 0;
+}
+
+#sailuxeadvantages.show {
+  opacity: 1;
+}
+
+.advantages,
+.expertise {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.advantages.show,
+.expertise.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  background: linear-gradient(rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7)), url("/assets/img/footer-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+footer .container .row .sailuxelogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+footer .container .row .sailuxelogo img {
+  max-width: 100%;
+}
+footer .container .row .advantages {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+footer .container .row .advantages img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .expertise {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  height: 180px;
+}
+footer .container .row .expertise img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .socialnetworks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+footer .container .row .socialnetworks div {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+footer .container .row .socialnetworks div:hover {
+  background-color: #018498;
+}
+footer .container .row .payments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+footer .container .row .paymentext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
 }
 
 * {
