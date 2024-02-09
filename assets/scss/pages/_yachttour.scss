@@ -317,7 +317,19 @@
                             gap: 7px;
                         }
                     }
-                  
+                    button{
+                        width: 100px;
+                        height: 40px;
+                        background-color: #018498;
+                        color: white;
+                        font-weight: 600;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;
+                        &:hover{
+                            background-color: #09525d;
+                        }
+                    }
                 }
                 }
             }
