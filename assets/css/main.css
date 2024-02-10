@@ -3980,6 +3980,13 @@ footer .container .row .paymentext {
   box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.4);
   border-bottom: 2px solid #018498;
   outline: none;
+  padding-top: 10px;
+  font-weight: 600;
+}
+#sailuxeyachttour .container .row .filteredtours .filteredtour #triptypes option {
+  font-weight: 600;
+  background-color: black;
+  color: white;
 }
 #sailuxeyachttour .container .row .filteredtours .filteredtour #locations {
   display: flex;
@@ -3994,6 +4001,29 @@ footer .container .row .paymentext {
   box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.4);
   border-bottom: 2px solid #018498;
   outline: none;
+  padding-top: 10px;
+  font-weight: 600;
+}
+#sailuxeyachttour .container .row .filteredtours .filteredtour #locations option {
+  font-weight: 600;
+  background-color: black;
+  color: white;
+}
+#sailuxeyachttour .container .row .filteredtours .filteredtour #price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 40px;
+  padding-left: 7px;
+  padding-top: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px 0px rgba(128, 128, 128, 0.4);
+  border-bottom: 2px solid #018498;
+  outline: none;
+  font-weight: 600;
 }
 #sailuxeyachttour .container .row .filteredtours #searchbutton {
   width: 100px;

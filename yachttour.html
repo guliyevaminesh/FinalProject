@@ -153,10 +153,12 @@
                                 </select>
                             </div>
                             <div class="filteredtour">
-                                <div>
                                     <label for="">Price Range</label>
-                                    <input type="range" id="priceSlider" min="378" max="895" step="1" value="378">
-                                </div>
+                                    <select id="price">
+                                        <option value="0">All</option>
+                                        <option value="1">Smallest to largest</option>
+                                        <option value="2">Largest to smallest</option>
+                                    </select>
                             </div>
                             <button id="searchbutton">Search</button>
                         </div>

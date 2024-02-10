@@ -102,50 +102,53 @@ function seacrhproduct(){
 }
 searchbutton.addEventListener('click',seacrhproduct)
 
-const priceSlider = document.getElementById('priceSlider'); 
 
-function rangePrice() {
-    yachttours.innerHTML = ""; 
-    const minPrice = 378; // Minimum fiyat
-    const maxPrice = parseInt(priceSlider.value); // Seçilen maksimum fiyat
+const price = document.getElementById('price')
 
-    axios.get(`http://localhost:3000/tours?minPrice=${minPrice}&maxPrice=${maxPrice}`)
-        .then(res => {
-            tours = res.data;
-            tours.map(item => {
-                const tour = document.createElement("div");
-                tour.className = "tourPacket col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4";
-                tour.innerHTML = `
-                    <img src="${item.thumbnailUrl}" alt="">
-                    <div class="tourstext">
-                        <p>${item.tripcode}</p>
-                        <h5>${item.country}</h5>
-                        <div class="times">
-                            <div class="time">
-                                <i class="fa-regular fa-clock fa-sm" style="color: #000000;"></i>
-                                <p>${item.tripduration}</p>
-                            </div>
-                            <div class="time">
-                                <i class="fa-solid fa-location-dot fa-sm" style="color: #000000;"></i>
-                                <p>${item.locations}</p>
-                            </div>
-                            <div class="time">
-                                <i class="fa-solid fa-people-group fa-sm" style="color: #000000;"></i>
-                                <p>${item.groupsize}</p>
-                            </div>
-                        </div>
-                        <h5>${item.price}</h5>
-                        <button>Explore</button>
-                    </div>`;
-                yachttours.appendChild(tour);
-            });
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+function priceRange(){
+    yachttours.innerHTML = ""
+    let selectvalued = price.value 
+
+    if(selectvalued === "1"){
+        axios.get('http://localhost:3000/tours')
+        .then( res => {
+            tours = res.data
+            let sortTours = tours.sort((a,b) => a.price - b.price)
+            sortTours.map( item => {
+                let tour = document.createElement("div")
+            tour.className = "tourPacket col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
+            tour.innerHTML = `
+            <img src=${item.thumbnailUrl} alt="">
+            <div class="tourstext">
+            <p>${item.tripcode}</p>
+            <h5>${item.country}</h5>
+            <div class="times">
+                <div class="time">
+                <i class="fa-regular fa-clock fa-sm" style="color: #000000;"></i>
+                <p>${item.tripduration}</p>
+                </div>
+    
+                <div class="time">
+                <i class="fa-solid fa-location-dot fa-sm" style="color: #000000;"></i>
+                <p>${item.locations}</p>
+                </div>
+    
+                <div class="time">
+                <i class="fa-solid fa-people-group fa-sm" style="color: #000000;"></i>
+                <p>${item.groupsize}</p>
+                </div>
+            </div>
+            <h5>${item.price}</h5>
+            <button>Explore</button>
+        </div>
+            `
+            yachttours.appendChild(tour)
+            })
+        }) 
+    }
 }
 
-searchbutton.addEventListener('click', rangePrice); // searchbutton dinleyicisi ekle
+price.addEventListener('change',priceRange)
 
 const triptypes = document.getElementById('triptypes')
 

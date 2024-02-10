@@ -254,6 +254,13 @@
                     box-shadow: 5px 10px 15px 0px rgb(128, 128, 128,0.4);
                     border-bottom: 2px solid #018498;
                     outline: none;
+                    padding-top: 10px;
+                    font-weight: 600;
+                    option{
+                        font-weight: 600;
+                        background-color: black;
+                        color: white;
+                    }
                 }
                 #locations{
                     display: flex;
@@ -268,6 +275,29 @@
                     box-shadow: 5px 10px 15px 0px rgb(128, 128, 128,0.4);
                     border-bottom: 2px solid #018498;
                     outline: none;
+                    padding-top: 10px;
+                    font-weight: 600;
+                    option{
+                        font-weight: 600;
+                        background-color: black;
+                        color: white;
+                    }
+                }
+                #price{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 160px;
+                    height: 40px;
+                    padding-left: 7px;
+                    padding-top: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    box-shadow: 5px 10px 15px 0px rgb(128, 128, 128,0.4);
+                    border-bottom: 2px solid #018498;
+                    outline: none;
+                    font-weight: 600;
                 }
               }  
               #searchbutton{
