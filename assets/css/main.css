@@ -4203,3 +4203,582 @@ footer .container .row .paymentext {
   color: white;
   margin-top: 20px;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.getinformationhead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+  position: absolute;
+  z-index: 1;
+}
+.getinformationhead nav {
+  width: 80%;
+}
+.getinformationhead nav img {
+  width: 240px;
+}
+.getinformationhead nav .collapseDiv {
+  justify-content: flex-end;
+}
+.getinformationhead nav .collapseDiv ul {
+  display: flex;
+  gap: 15px;
+}
+.getinformationhead nav .collapseDiv ul li a {
+  font-weight: 700;
+  color: black !important;
+  font-size: 14px;
+}
+.getinformationhead nav .collapseDiv ul li a:hover {
+  background-color: #018498;
+  color: white !important;
+  width: 100%;
+  border-radius: 5px;
+}
+.getinformationhead .canvasbtn {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+.getinformationhead .canvasbtn:hover {
+  background-color: transparent;
+  border: none;
+}
+.getinformationhead .information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 30px;
+}
+.getinformationhead .information h2 {
+  color: black;
+  font-weight: 700;
+  font-size: 28px;
+}
+.getinformationhead .information .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.getinformationhead .information .contact span {
+  font-weight: 450;
+  color: black;
+  font-size: 20px;
+}
+.getinformationhead .information .contact .contacticon {
+  background-color: #018498;
+  width: 90px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  margin-top: 15px;
+}
+.getinformationhead .socialnetwork {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.getinformationhead .socialnetwork .socialnetworkicon {
+  border: 1px solid #018498;
+  padding: 15px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.getinformationhead span {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 660px) {
+  .dashboard {
+    display: none !important;
+  }
+  .canvasbtn {
+    display: none;
+  }
+}
+.dashboard {
+  background-color: #018498;
+  border: none;
+  outline: none;
+  width: 190px;
+  height: 70px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+.dashboard img {
+  width: 60px;
+}
+
+.dashboard span {
+  color: white;
+  font-weight: 500;
+}
+
+.hover-content {
+  display: none;
+  position: absolute;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 5px;
+}
+.hover-content .about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  color: black !important;
+  padding-right: 15px;
+}
+.hover-content .about a {
+  color: black !important;
+}
+.hover-content .about a:hover {
+  color: white !important;
+  background-color: #018498;
+  padding: 7px;
+  width: auto;
+  border-radius: 3px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.nav-item:hover .hover-content {
+  display: block;
+}
+
+#getinformation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/assets/img/header-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 30px;
+}
+#getinformation .container {
+  margin: 30px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#getinformation .container .row {
+  margin: 30px;
+  padding: 30px;
+}
+#getinformation .container .row .getinformationtext {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+#getinformation .container .row .getinformationtext h1 {
+  color: black;
+  font-weight: 700;
+}
+#getinformation .container .row .getinformationtext a {
+  text-decoration: none;
+  color: black;
+}
+#getinformation .container .row .getinformationtext .countrytext {
+  display: flex;
+}
+
+#countrytour {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#countrytour .container .row #tourimage {
+  display: flex;
+  flex-wrap: wrap;
+}
+#countrytour .container .row #tourimage .tourImages {
+  position: relative;
+}
+#countrytour .container .row #tourimage .tourImages img {
+  max-width: 100%;
+}
+#countrytour .container .row #tourimage button {
+  position: absolute;
+  bottom: 40px; /* Alt kenardan 10 piksel yukarıda */
+  right: 0; /* Sağ kenara yapıştırmak için */
+  width: 170px;
+  height: 40px;
+  background-color: rgba(1, 132, 152, 0.7);
+  color: white;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  text-shadow: 2px 2px 4px black;
+  font-size: 22px;
+}
+#countrytour .container .row #tourimage button:hover {
+  background-color: #09525d;
+}
+#countrytour .container .row #tourinformation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#countrytour .container .row #tourinformation h3 {
+  font-weight: 700;
+}
+#countrytour .container .row #tourinformation h5 {
+  font-weight: 700;
+}
+#countrytour .container .row #tourinformation h6 {
+  font-weight: 700;
+}
+#countrytour .container .row #tourinformation span {
+  color: #018498;
+  font-weight: 600;
+}
+#countrytour .container .row #tourinformation .triact {
+  display: flex;
+  gap: 100px;
+}
+#countrytour .container .row #tourinformation .groupreview {
+  display: flex;
+  gap: 80px;
+}
+#countrytour .container .row #tourinformation .locationtrip {
+  display: flex;
+  gap: 80px;
+}
+#countrytour .container .row #tourinformation button {
+  width: 150px;
+  height: 60px;
+  background-color: #018498;
+  color: white;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+#countrytour .container .row #tourinformation button:hover {
+  background-color: #09525d;
+}
+
+#countryInformation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#countryInformation .container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#countryInformation .container .row #coutrytripinfo {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+#countryInformation .container .row #coutrytripinfo button {
+  border: none;
+  background-color: transparent;
+  width: 100px;
+  border-right: 1px solid rgba(128, 128, 128, 0.4);
+  display: flex;
+  align-items: center;
+}
+#countryInformation .container .row #coutrytripinfo a {
+  text-decoration: none;
+}
+#countryInformation .container .row #information {
+  display: flex;
+  flex-wrap: wrap;
+}
+#countryInformation .container .row #information .touroverview {
+  padding: 10px;
+}
+#countryInformation .container .row #information .touroverview p {
+  font-size: 13px;
+}
+#countryInformation .container .row #information .touroutline {
+  padding: 10px;
+}
+#countryInformation .container .row #information .touroutline p {
+  font-size: 13px;
+}
+#countryInformation .container .row #information .tourinclude {
+  padding: 10px;
+}
+#countryInformation .container .row #information .tourinclude p {
+  font-size: 13px;
+}
+#countryInformation .container .row #information .tourexclude {
+  padding: 10px;
+}
+#countryInformation .container .row #information .tourexclude p {
+  font-size: 13px;
+}
+#countryInformation .container .row #information .tourgallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#countryInformation .container .row #information .tourgallery img {
+  width: 300px;
+}
+#countryInformation .container .row #information .tourreview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#countryInformation .container .row #information .tourreview img {
+  width: 300px;
+}
+
+#countrymap {
+  width: 100%;
+  margin-top: 30px;
+}
+#countrymap .tourmap iframe {
+  width: 100%; /* iframe'in genişliği 100% */
+  height: 500px; /* iframe'in yüksekliği 500px */
+}
+
+#itineraries {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#itineraries .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#itineraries .container .row .itinerariestext {
+  text-align: center;
+  margin-bottom: 15px;
+}
+#itineraries .container .row .itinerariestext h3 {
+  font-weight: 400;
+}
+#itineraries .container .row .dayone {
+  text-align: right;
+  margin-bottom: 10px;
+}
+#itineraries .container .row .dayone h5 {
+  font-weight: 600;
+}
+#itineraries .container .row .dayone p {
+  font-weight: 600;
+  font-size: 16px;
+}
+#itineraries .container .row .dayone span {
+  font-size: 17px;
+}
+#itineraries .container .row .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#itineraries .container .row .icon img {
+  width: 30px;
+}
+#itineraries .container .row #yourplanone {
+  text-align: left;
+  font-size: 13px;
+}
+#itineraries .container .row #yourplanone h5 {
+  font-weight: 600;
+  font-size: 16px;
+}
+#itineraries .container .row #yourplantwo {
+  font-size: 13px;
+}
+#itineraries .container .row #yourplantwo h5 {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: right;
+}
+#itineraries .container .row .daytwo h5 {
+  font-weight: 600;
+}
+#itineraries .container .row .daytwo p {
+  font-weight: 600;
+  font-size: 16px;
+}
+#itineraries .container .row .daytwo span {
+  font-size: 17px;
+}
+#itineraries .container .row #yourplanthree {
+  font-size: 13px;
+}
+#itineraries .container .row #yourplanthree h5 {
+  font-weight: 600;
+  font-size: 16px;
+}
+#itineraries .container .row .daythree {
+  text-align: right;
+}
+#itineraries .container .row .daythree h5 {
+  font-weight: 600;
+}
+#itineraries .container .row .daythree p {
+  font-weight: 600;
+  font-size: 16px;
+}
+#itineraries .container .row .daythree span {
+  font-size: 17px;
+}
+
+#itineraries {
+  display: none;
+}
+
+#sailuxeadvantages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  opacity: 0;
+}
+
+#sailuxeadvantages.show {
+  opacity: 1;
+}
+
+.advantages,
+.expertise {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.advantages.show,
+.expertise.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  background: linear-gradient(rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7), rgba(1, 132, 152, 0.7)), url("/assets/img/footer-sailuxe-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+footer .container .row .sailuxelogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+footer .container .row .sailuxelogo img {
+  max-width: 100%;
+}
+footer .container .row .advantages {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+footer .container .row .advantages img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .expertise {
+  background-color: #018498;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  height: 180px;
+}
+footer .container .row .expertise img {
+  width: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .container .row .socialnetworks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+footer .container .row .socialnetworks div {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+footer .container .row .socialnetworks div:hover {
+  background-color: #018498;
+}
+footer .container .row .payments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+footer .container .row .paymentext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+}

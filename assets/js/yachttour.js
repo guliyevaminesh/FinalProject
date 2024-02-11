@@ -47,7 +47,8 @@ function getTours(){
             </div>
         </div>
         <h5>${item.price}</h5>
-        <button>Explore</button>
+        <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
+        
     </div>
         `
         yachttours.appendChild(tour)
@@ -56,6 +57,16 @@ function getTours(){
 }
 
 getTours()
+
+function gotoExplore(id){
+    let exploretours = JSON.parse(localStorage.getItem("exploretours")) || []
+     exploretours.push(tours.find(item => item.id == id))
+     const maxexploreTours = 1;
+     if(exploretours.length > maxexploreTours ) {
+        exploretours.shift();
+     }
+    localStorage.setItem("exploretours",JSON.stringify(exploretours))
+}
 
 const searchtour = document.getElementById('searchtour')
 const searchbutton = document.getElementById('searchbutton')
@@ -105,50 +116,9 @@ searchbutton.addEventListener('click',seacrhproduct)
 
 const price = document.getElementById('price')
 
-function priceRange(){
-    yachttours.innerHTML = ""
-    let selectvalued = price.value 
 
-    if(selectvalued === "1"){
-        axios.get('http://localhost:3000/tours')
-        .then( res => {
-            tours = res.data
-            let sortTours = tours.sort((a,b) => a.price - b.price)
-            sortTours.map( item => {
-                let tour = document.createElement("div")
-            tour.className = "tourPacket col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
-            tour.innerHTML = `
-            <img src=${item.thumbnailUrl} alt="">
-            <div class="tourstext">
-            <p>${item.tripcode}</p>
-            <h5>${item.country}</h5>
-            <div class="times">
-                <div class="time">
-                <i class="fa-regular fa-clock fa-sm" style="color: #000000;"></i>
-                <p>${item.tripduration}</p>
-                </div>
-    
-                <div class="time">
-                <i class="fa-solid fa-location-dot fa-sm" style="color: #000000;"></i>
-                <p>${item.locations}</p>
-                </div>
-    
-                <div class="time">
-                <i class="fa-solid fa-people-group fa-sm" style="color: #000000;"></i>
-                <p>${item.groupsize}</p>
-                </div>
-            </div>
-            <h5>${item.price}</h5>
-            <button>Explore</button>
-        </div>
-            `
-            yachttours.appendChild(tour)
-            })
-        }) 
-    }
-}
 
-price.addEventListener('change',priceRange)
+
 
 const triptypes = document.getElementById('triptypes')
 
@@ -280,7 +250,7 @@ function triptypeAll(){
     yachttours.innerHTML = ""
     let selectvalue = triptypes.value
     if(selectvalue === "0"){
-        axios.get('http://localhost:3000/tours?')
+        axios.get('http://localhost:3000/tours')
         .then( res => {
             tours = res.data
             tours.map( item => {
