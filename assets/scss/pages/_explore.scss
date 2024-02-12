@@ -324,6 +324,25 @@
             #information{
                 display: flex;
                 flex-wrap: wrap;
+                flex-direction: column;
+                gap: 20px;
+                #pricings{
+                    display: flex;
+                    flex-direction: column;
+                }
+                #paxselector{
+                    display: flex;
+                    flex-direction: column;
+                    .paxprice{
+                        display: flex;
+                        justify-content: space-between;
+                        .personprice{
+                            display: flex;
+                            gap: 7px;
+                        }
+                    }
+
+                }
                 .touroverview{
                     padding: 10px;
                     p{

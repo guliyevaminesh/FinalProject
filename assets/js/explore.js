@@ -60,7 +60,7 @@ function tourImage(){
             tourimages.className = "tourImages"
             tourimages.innerHTML = `
             <img src=${item.thumbnailUrl} alt="">
-    <button onclick="">View Gallery</button> 
+    <button onclick="getGallery()">View Gallery</button> 
     `
     tourimage.appendChild(tourimages)
 } )
@@ -348,9 +348,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+ // Booking butonuna tıklandığında "selectdate" içeriğini "information" içine taşı
+ document.getElementById("booking").addEventListener("click", function() {
+    document.getElementById("information").innerHTML = document.getElementById("selectdate").innerHTML;
+});
 
-  
-  
+// Tarih seçildiğinde "pricings" div'ini görünür yap
+document.getElementById("information").addEventListener("change", function(event) {
+    if (event.target && event.target.id === "dateInput") {
+        document.getElementById("pricings").style.display = "block";
+    }
+});
 
 
 

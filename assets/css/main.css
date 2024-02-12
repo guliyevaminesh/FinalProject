@@ -4523,6 +4523,24 @@ footer .container .row .paymentext {
 #countryInformation .container .row #information {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+#countryInformation .container .row #information #pricings {
+  display: flex;
+  flex-direction: column;
+}
+#countryInformation .container .row #information #paxselector {
+  display: flex;
+  flex-direction: column;
+}
+#countryInformation .container .row #information #paxselector .paxprice {
+  display: flex;
+  justify-content: space-between;
+}
+#countryInformation .container .row #information #paxselector .paxprice .personprice {
+  display: flex;
+  gap: 7px;
 }
 #countryInformation .container .row #information .touroverview {
   padding: 10px;
