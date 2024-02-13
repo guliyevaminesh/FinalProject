@@ -293,6 +293,153 @@ header{
         }   
     }
   }
+ 
+
+  #exquisite{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px ;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .row{
+        .exquisitetext{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+        }
+        #exquisitetour{
+            display: flex;
+            flex-wrap: wrap;
+            .tourPacket{
+                padding-left: 10px;
+                margin-bottom: 20px;
+                img{
+                    max-width: 100%;
+                }
+                .tourstext{
+                    background-color: white;
+                    border: 1px solid rgb(0, 0, 0,0.1);
+                    padding-left: 5px;
+                    padding-bottom: 10px;
+                    border-radius: 3px;
+                h5{
+                    font-weight: 700;
+                    color: black;
+                    margin-bottom: 17px;
+                }
+                .times{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    margin-top: 7px;
+                    .time{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 7px;
+                    }
+                }
+                button{
+                    width: 100px;
+                    height: 40px;
+                    background-color: #018498;
+                    color: white;
+                    font-weight: 600;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    &:hover{
+                        background-color: #09525d;
+                    }
+                }
+            }
+            }
+        }
+    }
+}
+}
+.exquisitetext h3 {
+    opacity: 0;
+    font-weight: 700;
+    transform: translateX(-50px);
+    transition: opacity 0.5s ease, transform 0.7s ease;
+  }
+  
+  .exquisitetext.show h3 {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #seassplendor{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px ;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .row{
+        .splendortext{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+        }
+        .countrytrip{
+            img{
+                max-width: 100%;
+                border-radius: 3px;
+            }
+            .countriptext{
+                background-color: white;
+                border: 1px solid rgb(128, 128, 128,0.2);
+                padding: 10px;
+                .triptext{
+                    display: flex;
+                    justify-content: space-between;
+                    button{
+                        background-color: transparent;
+                        border: none;
+                        color: #018498;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        }   
+    }
+  }
+  .splendortext h3 {
+    opacity: 0;
+    font-weight: 700;
+    transform: translateX(-50px);
+    transition: opacity 0.5s ease, transform 0.7s ease;
+  }
+  
+  .splendortext.show h3 {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  #expeditions{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
 
   #unveilingsailuxe{
     width: 100%;
@@ -328,6 +475,7 @@ header{
   .unveilingtext h3 {
   opacity: 0;
   transform: translateX(-50px);
+  font-weight: 700;
   transition: opacity 0.5s ease, transform 0.7s ease;
 }
 
@@ -335,6 +483,87 @@ header{
   opacity: 1;
   transform: translateX(0);
 }
+
+#sailuxesails{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px ;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .row{
+        .sailuxesailstext{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+        }
+        #sailuxesailstour{
+            display: flex;
+            flex-wrap: wrap;
+            .tourPacket{
+                padding-left: 10px;
+                margin-bottom: 20px;
+                img{
+                    max-width: 100%;
+                }
+                .tourstext{
+                    background-color: white;
+                    border: 1px solid rgb(0, 0, 0,0.1);
+                    padding-left: 5px;
+                    padding-bottom: 10px;
+                    border-radius: 3px;
+                h5{
+                    font-weight: 700;
+                    color: black;
+                    margin-bottom: 17px;
+                }
+                .times{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    margin-top: 7px;
+                    .time{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 7px;
+                    }
+                }
+                button{
+                    width: 100px;
+                    height: 40px;
+                    background-color: #018498;
+                    color: white;
+                    font-weight: 600;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    &:hover{
+                        background-color: #09525d;
+                    }
+                }
+            }
+            }
+        }
+    }
+}
+}
+.sailuxesailstext h3 {
+    opacity: 0;
+    font-weight: 700;
+    transform: translateX(-50px);
+    transition: opacity 0.5s ease, transform 0.7s ease;
+  }
+  
+  .sailuxesailstext.show h3 {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
 #seascollaboration{
     width: 100%;
@@ -387,6 +616,7 @@ header{
 .collaborationtext h3 {
     opacity: 0;
     transform: translateX(-50px);
+    font-weight: 700;
     transition: opacity 0.5s ease, transform 0.7s ease;
   }
   

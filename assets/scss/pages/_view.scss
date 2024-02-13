@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.dashboardhead{
+.getinformationhead{
     width: 100%;
     display: flex;
     align-items: center;
@@ -202,12 +202,15 @@
                     text-decoration: none;
                     color: black;
                 }
+                .countrytext{
+                    display: flex;
+                    padding-left: 15px;
+                }
             }
         }
     }
 }
-
-#dashboardForm{
+#getlocations{
     width: 100%;
     display: flex;
     align-items: center;
@@ -215,180 +218,57 @@
     margin-top: 15px;
     margin-bottom: 15px;
     .container{
-        width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
-        #loginForm{
-            width: 50%;
-            background-color: #F4F4F4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            border-radius: 3px;
-            border: 1px solid rgb(128, 128, 128,0.3);
-            h5{
-                color: black;
-                font-weight: 400;
-                margin-bottom: 30px;
-            }
-            .dashboardInputs{
-                width: 90%;
+        .row{
+            #tripdestinations{
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: white;
-                margin-bottom: 10px;
-                .usericon{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-right: 1px solid rgb(119, 116, 116);
-                    height: 30px;
+                flex-wrap: wrap;
+                .tourDestination{
                     padding: 10px;
-                }
-            #username{
-                width: 100% !important;
-               border: none;
-               height: 30px;
-               margin-bottom: 15px;
-               background-color: transparent;
-               padding-left: 20px;
-               padding-top: 12px;
-               outline: none;
-            }
-            #password{
-                width: 100% !important;
-               border: none;
-               height: 30px;
-               margin-bottom: 15px;
-               background-color: transparent;
-               padding-left: 20px;
-               padding-top: 12px;
-               outline: none;
-            }
-            #email{
-                width: 100% !important;
-               border: none;
-               height: 30px;
-               margin-bottom: 15px;
-               background-color: transparent;
-               padding-left: 20px;
-               padding-top: 12px;
-               outline: none;
-            }
-        }
-        .dashboardcheck{
-            width: 90%;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-        #loginbutton{
-            width: 150px;
-            height: 60px;
-            background-color: #018498;
-            color: white;
-            border: none;
-            outline: none;
-            border-radius: 5px;
-            font-weight: 700;
-            font-size: 18px;
-            margin: 30px;
-            &:hover{
-                background-color: #065662;
-            }
-        }
-        }
-        #registerForm {
-            display: none;
-           
-            .myform{
-                width: 140%;
-                background-color: #F4F4F4;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                padding-top: 30px;
-                padding-bottom: 30px;
-                border-radius: 3px;
-                border: 1px solid rgb(128, 128, 128,0.3);
-                h5{
-                    color: black;
-                    font-weight: 400;
-                    margin-bottom: 30px;
-                }
-                .dashboardInputs{
-                    width: 90%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: white;
-                    margin-bottom: 10px;
-                    .usericon{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border-right: 1px solid rgb(119, 116, 116);
-                        height: 30px;
-                        padding: 10px;
+                    img{
+                        max-width: 100%;
                     }
-                #username{
-                    width: 100% !important;
-                   border: none;
-                   height: 30px;
-                   margin-bottom: 15px;
-                   background-color: transparent;
-                   padding-left: 20px;
-                   padding-top: 12px;
-                   outline: none;
+                    .tourstext{
+                        background-color: white;
+                        border: 1px solid rgb(0, 0, 0,0.1);
+                        padding-left: 5px;
+                        padding-bottom: 10px;
+                        border-radius: 3px;
+                    h5{
+                        font-weight: 700;
+                        color: black;
+                        margin-bottom: 17px;
+                    }
+                    .times{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        margin-top: 7px;
+                        .time{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 7px;
+                        }
+                    }
+                    button{
+                        width: 100px;
+                        height: 40px;
+                        background-color: #018498;
+                        color: white;
+                        font-weight: 600;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;
+                        &:hover{
+                            background-color: #09525d;
+                        }
+                    }
                 }
-                #password{
-                    width: 100% !important;
-                   border: none;
-                   height: 30px;
-                   margin-bottom: 15px;
-                   background-color: transparent;
-                   padding-left: 20px;
-                   padding-top: 12px;
-                   outline: none;
                 }
-                #email{
-                    width: 100% !important;
-                   border: none;
-                   height: 30px;
-                   margin-bottom: 15px;
-                   background-color: transparent;
-                   padding-left: 20px;
-                   padding-top: 12px;
-                   outline: none;
-                }
-            }
-            .dashboardcheck{
-                width: 90%;
-                display: flex;
-                justify-content: space-between;
-                margin-top: 20px;
-            }
-            #registerbutton{
-                width: 150px;
-                height: 60px;
-                background-color: #018498;
-                color: white;
-                border: none;
-                outline: none;
-                border-radius: 5px;
-                font-weight: 700;
-                font-size: 18px;
-                margin: 30px;
-                &:hover{
-                    background-color: #065662;
-                }
-            }
             }
         }
     }

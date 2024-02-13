@@ -103,7 +103,7 @@ function seacrhproduct(){
                 </div>
             </div>
             <h5>${item.price}</h5>
-            <button>Explore</button>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
         </div>
             `
             yachttours.appendChild(tour)
@@ -154,7 +154,7 @@ function triptypeHoliday(){
                 </div>
             </div>
             <h5>${item.price}</h5>
-            <button>Explore</button>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
         </div>
             `
             yachttours.appendChild(tour)
@@ -195,7 +195,7 @@ function triptypeParty(){
                 </div>
             </div>
             <h5>${item.price}</h5>
-            <button>Explore</button>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
         </div>
             `
             yachttours.appendChild(tour)
@@ -236,7 +236,7 @@ function triptypeYacht(){
                 </div>
             </div>
             <h5>${item.price}</h5>
-            <button>Explore</button>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
         </div>
             `
             yachttours.appendChild(tour)
@@ -278,7 +278,7 @@ function triptypeAll(){
                 </div>
             </div>
             <h5>${item.price}</h5>
-            <button>Explore</button>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
         </div>
             `
             yachttours.appendChild(tour)
@@ -322,7 +322,7 @@ function locationAmerica(){
                 </div>
             </div>
             <h5>${item.price}</h5>
-            <button>Explore</button>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
         </div>
             `
             yachttours.appendChild(tour)
@@ -363,7 +363,7 @@ function locationDubai(){
                 </div>
             </div>
             <h5>${item.price}</h5>
-            <button>Explore</button>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
         </div>
             `
             yachttours.appendChild(tour)
@@ -371,47 +371,6 @@ function locationDubai(){
         })
 }}
 locations.addEventListener("change",locationDubai)
-
-function locationAll(){
-    yachttours.innerHTML = ""
-    let selectvalue = locations.value
-    if(selectvalue === "0"){
-        axios.get('http://localhost:3000/tours')
-        .then( res => {
-            tours = res.data
-            tours.map( item => {
-            let tour = document.createElement("div")
-            tour.className = "tourPacket col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
-            tour.innerHTML = `
-            <img src=${item.thumbnailUrl} alt="">
-            <div class="tourstext">
-            <p>${item.tripcode}</p>
-            <h5>${item.country}</h5>
-            <div class="times">
-                <div class="time">
-                <i class="fa-regular fa-clock fa-sm" style="color: #000000;"></i>
-                <p>${item.tripduration}</p>
-                </div>
-    
-                <div class="time">
-                <i class="fa-solid fa-location-dot fa-sm" style="color: #000000;"></i>
-                <p>${item.locations}</p>
-                </div>
-    
-                <div class="time">
-                <i class="fa-solid fa-people-group fa-sm" style="color: #000000;"></i>
-                <p>${item.groupsize}</p>
-                </div>
-            </div>
-            <h5>${item.price}</h5>
-            <button>Explore</button>
-        </div>
-            `
-            yachttours.appendChild(tour)
-            })
-        })
-}}
-locations.addEventListener("change",locationAll)
 
 function locationFrance(){
     yachttours.innerHTML = ""
@@ -445,7 +404,7 @@ function locationFrance(){
                 </div>
             </div>
             <h5>${item.price}</h5>
-            <button>Explore</button>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
         </div>
             `
             yachttours.appendChild(tour)
@@ -486,7 +445,7 @@ function locationGreece(){
                 </div>
             </div>
             <h5>${item.price}</h5>
-            <button>Explore</button>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
         </div>
             `
             yachttours.appendChild(tour)
@@ -527,7 +486,7 @@ function locationJapan(){
                 </div>
             </div>
             <h5>${item.price}</h5>
-            <button>Explore</button>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
         </div>
             `
             yachttours.appendChild(tour)
@@ -568,7 +527,7 @@ function locationSwitzerland(){
                 </div>
             </div>
             <h5>${item.price}</h5>
-            <button>Explore</button>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
         </div>
             `
             yachttours.appendChild(tour)
@@ -609,7 +568,7 @@ function locationTurkey(){
                 </div>
             </div>
             <h5>${item.price}</h5>
-            <button>Explore</button>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
         </div>
             `
             yachttours.appendChild(tour)
