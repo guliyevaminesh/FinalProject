@@ -1,0 +1,615 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.getinformationhead{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding-right: 20px;
+    position: absolute;
+    z-index: 1;
+    nav{
+        width: 80%;
+        
+        img{
+            width: 240px;
+        }
+        .collapseDiv{
+            justify-content: flex-end;
+            ul{
+                display: flex;
+                gap: 15px;
+                li{
+                    a{
+                        font-weight: 700;
+                        color: black !important;
+                        font-size: 14px;
+                        &:hover{
+                            background-color: #018498;
+                            color: white !important;
+                            width: 100%;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .canvasbtn{
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        &:hover{
+            background-color: transparent;
+            border: none;
+        }
+    }
+    .information{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+        gap: 30px;
+        h2{
+            color: black;
+            font-weight: 700;
+            font-size: 28px;
+        }
+        .contact{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 10px;
+            span{
+                font-weight: 450;
+                color: black;
+                font-size: 20px;
+            }
+            .contacticon{
+                background-color: #018498;
+                width: 90px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                border-radius: 5px;
+                margin-bottom: 12px;
+                margin-top: 15px;
+            }
+        }
+    }
+    .socialnetwork{
+        display: flex;
+        gap: 7px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        .socialnetworkicon{
+            border: 1px solid #018498;
+            padding: 15px;
+            background-color: transparent;
+            border-radius: 5px;
+        }
+    }
+    span{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 660px) {
+    .dashboard {
+        display: none !important;
+    }
+
+    .canvasbtn {
+        display: none;
+    }
+}
+
+.dashboard {
+    img {
+        width: 60px;
+    }
+    background-color: #018498;
+    border: none;
+    outline: none;
+    width: 190px;
+    height: 70px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.dashboard span {
+    color: white;
+    font-weight: 500;
+}
+
+.hover-content {
+    display: none;
+    position: absolute;   
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    background-color: white;
+    border-radius: 5px;
+   .about{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    color: black !important;
+    padding-right: 15px;
+    a {
+        color: black !important;
+        &:hover{
+            color: white !important;
+            background-color: #018498;
+            padding: 7px;
+            width:auto;
+            border-radius: 3px;
+            text-decoration: none;
+            width: 100%;
+        }
+    }
+   }
+}
+.nav-item:hover .hover-content {
+    display: block;
+}
+
+
+#getinformation{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(255, 255, 255,0.9),rgba(255, 255, 255,0.9),rgba(255, 255, 255,0.9)),url('/assets/img/header-sailuxe-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 30px;
+    .container{
+        margin: 30px;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .row{
+            margin: 30px;
+            padding: 30px;
+            .getinformationtext{
+                margin: 20px;
+                padding: 20px;
+                text-align: center;
+                h1{
+                    color: black;
+                    font-weight: 700;
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                .countrytext{
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+#countrytour{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    .container{
+        .row{
+            #tourimage{
+                display: flex;
+                flex-wrap: wrap;
+               .tourImages{
+                position: relative;
+                img{
+                    max-width: 100%;
+                }
+               }
+               button{
+                position: absolute;
+                bottom: 40px; 
+                right: 0; 
+                width: 170px;
+                height: 40px;
+                background-color: rgb(1, 132, 152,0.7);
+                color: white;
+                font-weight: 600;
+                border: none;
+                outline: none;
+                text-shadow: 2px 2px 4px black;
+                font-size: 22px;
+                &:hover{
+                    background-color: #09525d;
+                }
+               }
+            }
+
+            #tourinformation{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+               h3{
+                font-weight: 700;
+               }
+               h5{
+                font-weight: 700;
+               }
+               h6{
+                font-weight: 700;
+               }
+               span{
+                color: #018498;
+                font-weight: 600;
+               }
+               .triact{
+                display: flex;
+                gap: 100px;
+               }
+               .groupreview{
+                display: flex;
+                gap: 80px;
+               }
+               .locationtrip{
+                display: flex;
+                gap: 80px;
+               }
+               button{
+                width: 150px;
+                height: 60px;
+                background-color: #018498;
+                color: white;
+                font-weight: 600;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                &:hover{
+                    background-color: #09525d;
+                }
+               }
+            }
+        }
+    }
+}
+
+#countryInformation{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .row{
+            #coutrytripinfo{
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 15px;
+                button{
+                    border: none;
+                    background-color: transparent;
+                    width: 100px;
+                    border-right: 1px solid rgb(128, 128, 128,0.4);
+                    display: flex;
+                    align-items: center;
+                }
+                a{
+                    text-decoration: none;
+                }
+            }
+            #information{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap: 20px;
+                #pricings{
+                    display: flex;
+                    flex-direction: column;
+                }
+                #paxselector{
+                    display: flex;
+                    flex-direction: column;
+                    .paxprice{
+                        display: flex;
+                        justify-content: space-between;
+                        .personprice{
+                            display: flex;
+                            gap: 7px;
+                        }
+                    }
+
+                }
+                .touroverview{
+                    padding: 10px;
+                    p{
+                        font-size: 13px;
+                    }
+                }
+                .touroutline{
+                    padding: 10px;
+                    p{
+                        font-size: 13px;
+                    }
+                }
+                .tourinclude{
+                    padding: 10px;
+                    p{
+                        font-size: 13px;
+                    }
+                }
+                .tourexclude{
+                    padding: 10px;
+                    p{
+                        font-size: 13px;
+                    }
+                }
+                .tourgallery{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    img{
+                        width: 300px;
+                    }
+                } 
+                .tourreview{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    img{
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+#countrymap{
+    width: 100%;
+    margin-top: 30px;
+    .tourmap iframe {
+        width: 100%; 
+        height: 500px;
+    }
+}
+
+#itineraries{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .row{
+            .itinerariestext{
+                text-align: center;
+                margin-bottom: 15px;
+               h3{
+                font-weight: 400;
+               }
+            }
+            .dayone{
+                text-align: right;
+                margin-bottom: 10px;
+                h5{
+                    font-weight: 600;
+                }
+                p{
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+                span{
+                  font-size: 17px;  
+                }
+            }
+           .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 30px;
+            }
+           }
+            #yourplanone{
+                text-align: left;
+                font-size: 13px;
+                h5{
+                    font-weight: 600;
+                    font-size: 16px;
+                } 
+            }
+            #yourplantwo{
+                
+                font-size: 13px;
+                h5{
+                    font-weight: 600;
+                    font-size: 16px;
+                    text-align: right;
+                }
+            }
+            .daytwo{
+                h5{
+                    font-weight: 600;
+                }
+                p{
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+                span{
+                  font-size: 17px;  
+                }
+            }
+            #yourplanthree{
+                font-size: 13px;
+                h5{
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+            }
+            .daythree{
+                text-align: right;
+                h5{
+                    font-weight: 600;
+                }
+                p{
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+                span{
+                  font-size: 17px;  
+                }
+            }
+
+        }
+    }
+}
+#itineraries {
+    display: none;
+  }
+
+#sailuxeadvantages{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    opacity: 0;
+}
+#sailuxeadvantages.show {
+    opacity: 1;
+}
+
+.advantages,
+.expertise {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.advantages.show,
+.expertise.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s; 
+}
+
+
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    background: linear-gradient(rgb(1, 132, 152,0.7),rgb(1, 132, 152,0.7),rgb(1, 132, 152,0.7)),url('/assets/img/footer-sailuxe-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        .row{
+            .sailuxelogo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 15px;
+                img{
+                    max-width: 100%;
+                }
+            }
+            .advantages{
+                background-color: #018498;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+                border-radius: 5px;
+                margin-bottom: 30px;
+                img{
+                    width: 80px;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+            .expertise{
+                background-color: #018498;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+                border-radius: 5px;
+                margin-bottom: 30px;
+                height: 180px;
+                img{
+                   width: 80px;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+            .socialnetworks{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                div{
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    padding: 10px;
+                    &:hover{
+                        background-color: #018498;
+                    }
+                }
+            }
+            .payments{
+                display: flex;
+                align-items: center;
+                justify-content: center; 
+                margin-top: 20px;
+  
+            }
+            .paymentext{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-top: 20px;
+            }
+        } 
+    }
+}
