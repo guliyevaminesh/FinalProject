@@ -44,28 +44,28 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 800); 
   });
 
-  document.getElementById("turkey").addEventListener("click", function() {
-    tripdestinations.innerHTML = "";
-    locationTurkey();
-  });
+  // document.getElementById("turkey").addEventListener("click", function() {
+  //   tripdestinations.innerHTML = "";
+  //   locationTurkey();
+  // }); 
   
-  document.getElementById("switzerland").addEventListener("click", function() {
-    tripdestinations.innerHTML = "";
-    locationSwitzerland();
-  });
+  // document.getElementById("switzerland").addEventListener("click", function() {
+  //   tripdestinations.innerHTML = "";
+  //   locationSwitzerland();
+  // });
   
-  document.getElementById("japan").addEventListener("click", function() {
-    tripdestinations.innerHTML = "";
-    locationJapan();
-  });
+  // document.getElementById("japan").addEventListener("click", function() {
+  //   tripdestinations.innerHTML = "";
+  //   locationJapan();
+  // });
   
-  document.getElementById("greece").addEventListener("click", function() {
-    tripdestinations.innerHTML = "";
-    locationGreece();
-  });
-
+  // document.getElementById("greece").addEventListener("click", function() {
+  //   tripdestinations.innerHTML = "";
+  //   locationGreece();
+  // });
+  
   const exquisitetour = document.getElementById('exquisitetour')
-
+  
   function getTours(){
     exquisitetour.innerHTML = "";
     let limit = 3;
@@ -106,19 +106,27 @@ document.addEventListener("DOMContentLoaded", function() {
     })
   }
   getTours();
+  function gotoExplore(id){
+    let exploretours = JSON.parse(localStorage.getItem("exploretours")) || []
+     exploretours.push(tours.find(item => item.id == id))
+     const maxexploreTours = 1;
+     if(exploretours.length > maxexploreTours ) {
+        exploretours.shift();
+     }
+    localStorage.setItem("exploretours",JSON.stringify(exploretours))
+  }
 
   const sailuxesailstour = document.getElementById('sailuxesailstour');
-
   function getsailTours(){
     sailuxesailstour.innerHTML = "";
 
-    axios.get(`http://localhost:3000/tours`)
+    axios.get('http://localhost:3000/tours')
     .then(res => {
         let tours = res.data;
         let filteredTours = tours.filter(item => {
             return item.sales !== "$0" && item.offer !== "%0";
         });
-        filteredTours.forEach(item => {
+        filteredTours.map(item => {
             let tour = document.createElement("div");
             tour.className = "tourPacket col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4";
             tour.innerHTML = `
@@ -142,26 +150,15 @@ document.addEventListener("DOMContentLoaded", function() {
                             <p>${item.groupsize}</p>
                         </div>
                     </div>
-                    <h5>${item.offer} Off ${item.sales} </h5>
-                    <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
+                    <h5>${item.offer} Off ${item.sales}</h5>
+                    <button onclick="gotoExplore(${item.id})">Explore</button>
                 </div>
             `;
             sailuxesailstour.appendChild(tour);
         });
     });
 }
-
 getsailTours();
-
-  function gotoExplore(id){
-    let exploretours = JSON.parse(localStorage.getItem("exploretours")) || []
-     exploretours.push(tours.find(item => item.id == id))
-     const maxexploreTours = 1;
-     if(exploretours.length > maxexploreTours ) {
-        exploretours.shift();
-     }
-    localStorage.setItem("exploretours",JSON.stringify(exploretours))
-}
 
 
   const experiencesform = document.getElementById('experiencesform')

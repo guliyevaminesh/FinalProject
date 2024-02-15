@@ -321,67 +321,174 @@
                     text-decoration: none;
                 }
             }
-            #information{
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: column;
-                gap: 20px;
-                #pricings{
+            #information {
+                display: none;
+                margin-top: 30px;
+                #informationtourprice{
                     display: flex;
                     flex-direction: column;
-                }
-                #paxselector{
-                    display: flex;
-                    flex-direction: column;
-                    .paxprice{
-                        display: flex;
-                        justify-content: space-between;
-                        .personprice{
-                            display: flex;
-                            gap: 7px;
+                    gap: 30px;
+                    #selectdate{
+                        padding-bottom: 15px;
+                        border-bottom: 1px solid rgb(128, 128, 128,0.4);
+                        p{
+                            font-weight: 600;
+                        }
+                        #dateInput{
+                            outline: none;
+                            padding: 5px;
+                            border: 1px solid #018498;
+                            border-radius: 4px;
+
+                            &:hover{
+                                background-color: rgb(1, 132, 152,0.5);
+                            }
+                        }
+                        #clearAll{
+                            border: none;
+                            border: 1px solid red;
+                            border-radius: 3px;
+                            padding: 5px;
+                            &:hover{
+                                border: none;
+                                background-color: rgb(255, 0, 0,0.4);
+                            }
                         }
                     }
+                    #pricings{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        background-color: #F4F4F8;
+                        padding: 30px;
+                        p{
+                            font-weight: 600;
+                            font-size: 18px;
+                        }
+                        #special{
+                            border: none;
+                            text-align: left;
+                            background-color: white;
+                            border: 1px solid rgb(0, 0, 0,0.4);
+                            height: 40px;
+                            padding-left: 15px;
+                            border-radius: 4px;
+                        }
+                        #family{
+                            border: none;
+                            text-align: left;
+                            background-color: white;
+                            border: 1px solid rgb(0, 0, 0,0.4);
+                            height: 40px;
+                            padding-left: 15px;
+                            border-radius: 4px;
+                        }
+                        #honeymoon{
+                            border: none;
+                            text-align: left;
+                            background-color: white;
+                            border: 1px solid rgb(0, 0, 0,0.4);
+                            height: 40px;
+                            padding-left: 15px;
+                            border-radius: 4px;
+                        }
 
+                        .paxselector {
+                            display: none;
+                            justify-content: flex-end;
+                            margin-top: 20px;
+                            background-color: white;
+                            padding: 10px;
+                            .paxpricetext{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 7px;
+                                .pax{
+                                    font-weight: 600;
+                                    font-size: 18px;
+                                    width: 100%;
+                                    border-bottom: 1px solid rgb(0, 0, 0,0.4);
+                                }
+                                .paxprice{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .personprice{
+                                        display: flex;
+                                       .increaseBtn{
+                                        border: none;
+                                        height: 30px;
+                                        width: 30px;
+                                        background-color: #F4F4F8;
+                                       }
+                                       .decreaseBtn{
+                                        border: none;
+                                        height: 30px;
+                                        width: 30px;
+                                        background-color: #F4F4F8;
+                                       }
+                                       .counter{
+                                        border: 1px solid black;
+                                        height:30px;
+                                        width: 30px;
+                                        background-color: white;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                       }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    #total{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        justify-content: space-between;
+                        background-color: #F4F4F8;
+                        padding: 10px;
+                        .pricingtext{
+                            display: flex;
+                            gap: 10px;
+                            #pricingvalue{
+                                padding-top: 1px;
+                                font-size: 14px;
+                            }
+                        }
+                        .datetext{
+                            display: flex;
+                            gap: 10px;
+                            #datevalue{
+                                padding-top: 1px;
+                                font-size: 14px;
+                            }
+                        }
+                        .totaltext{
+                            display: flex;
+                            gap: 5px;
+                            #booknow{
+                                border: none;
+                                background-color: rgb(19, 131, 148,0.4);
+                                padding: 5px;
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+            }
+            }
+            .succesicon{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 10%;
                 }
-                .touroverview{
-                    padding: 10px;
-                    p{
-                        font-size: 13px;
-                    }
-                }
-                .touroutline{
-                    padding: 10px;
-                    p{
-                        font-size: 13px;
-                    }
-                }
-                .tourinclude{
-                    padding: 10px;
-                    p{
-                        font-size: 13px;
-                    }
-                }
-                .tourexclude{
-                    padding: 10px;
-                    p{
-                        font-size: 13px;
-                    }
-                }
-                .tourgallery{
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 20px;
-                    img{
-                        width: 300px;
-                    }
-                } 
-                .tourreview{
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 20px;
-                    img{
-                        width: 300px;
-                    }
+                h3{
+                    color: #3EB655;
+
                 }
             }
         }

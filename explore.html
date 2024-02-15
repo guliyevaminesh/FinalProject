@@ -100,10 +100,12 @@
   </div>
 </div>
  
+<a href="./dashboard.html">
     <button class="dashboard">
-        <img src="./assets/img/Screenshot 2024-01-31 144259.png" alt="Yacht">
-        <span>Dashboard</span>
-    </button>
+   <img src="./assets/img/Screenshot 2024-01-31 144259.png" alt="Yacht">
+   <span>Dashboard</span>
+</button>
+</a>
 
     </header>
 
@@ -135,7 +137,7 @@
 
                     <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                         <div id="tourinformation">
-                            
+                          
                         </div>
                     </div>
                 </div>
@@ -175,32 +177,88 @@
 
                         </div>
                         <div id="information">
-                            <div id="selectdate" style="display: none;">
+                           <div id="informationtourprice">
+                            <div id="selectdate">
                                 <p>Select Date and Pricing Options for this trip in the Trip Options setting.</p>
+                                <button id="clearAll"><i class="fa-solid fa-rotate-right fa-flip-horizontal fa-lg" style="color: #f00000;"></i> Clear all</button>
                                 <input type="date" id="dateInput">
                             </div>
-                            <div id="pricings" style="display: none;">
+
+                            <div id="pricings">
                                 <p>Pricings</p>
                                 <button id="special">Special</button>
                                 <button id="family">Family</button>
                                 <button id="honeymoon">Honeymoon</button>
-                            </div>
-                        </div>
-                    </div>
-                   
 
-                            <!-- <div id="paxselector">
-                                <p>Pax Selector</p>
-                                <div class="paxprice">
-                                    <h5>Adult  (0/6)</h5>
-                                    <div class="personprice">
-                                        <p><span>$687.00</span> /Person</p>
-                                        <button id="reduce">-</button>
-                                        <span>0</span>
-                                        <button id="increase">+</button>
+                                <div id="paxselectorspecial" class="paxselector">
+                                   <div class="paxpricetext">
+                                    <p class="pax">Pax Selector</p>
+                                    <div class="paxprice">
+                                        <h5>Adult (<span class="adultCounter">0</span>/7)</h5>
+                                        <div class="personprice">
+                                            <p><span>$425.00</span> /Person</p>
+                                            <button class="increaseBtn">+</button>
+                                            <span class="counter">0</span>
+                                            <button class="decreaseBtn">-</button>
+                                        </div>
+                                    </div>
+                                    
+                                   </div>
+                                </div>
+
+                                <div id="paxselectorfamily" class="paxselector">
+                                    <div class="paxpricetext">
+                                        <p class="pax">Pax Selector</p>
+                                    <div class="paxprice">
+                                        <h5>Adult (<span class="adultCounter">0</span>/7)</h5>
+                                        <div class="personprice">
+                                            <p><span>$886.00</span> /Person</p>
+                                            <button class="increaseBtn">+</button>
+                                            <span class="counter">0</span>
+                                            <button class="decreaseBtn">-</button>
+                                        </div>
+                                    </div>
                                     </div>
                                 </div>
-                            </div> -->
+
+                                <div id="paxselectorhoneymoon" class="paxselector">
+                                    <div class="paxpricetext">
+                                        <p class="pax">Pax Selector</p>
+                                    <div class="paxprice">
+                                        <h5>Adult (<span class="adultCounter">0</span>/2)</h5>
+                                        <div class="personprice">
+                                            <p><span>$1059.00</span> /Person</p>
+                                            <button class="increaseBtn">+</button>
+                                            <span class="counter">0</span>
+                                            <button class="decreaseBtn">-</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="total">
+                               <div class="pricingtext">
+                                <h6>Pricing:</h6>
+                                <p id="pricingvalue"></p>
+                               </div>
+
+                              <div class="datetext">
+                                <h6>Trip date:</h6>
+                                <p id="datevalue"></p>
+                              </div>
+
+                               <div class="totaltext">
+                                <h5>Total:</h5>
+                                <p id="totalvalue"></p>
+                                <button id="booknow">Book Now</button>
+                               </div>
+                            </div>
+                           </div>
+                        </div>
+                      
+                    </div>
+                 
                 </div>
             </div>
         </section>

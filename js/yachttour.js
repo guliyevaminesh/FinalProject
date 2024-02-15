@@ -115,49 +115,134 @@ searchbutton.addEventListener('click',seacrhproduct)
 
 const price = document.getElementById('price')
 
-function sortPrice() {
-    yachttours.innerHTML = "";
-    let tourprice = price.value;
-
-    if (tourprice === "1") {
+function priceAll(){
+    yachttours.innerHTML = ""
+    let selectvalues = price.value 
+    if(selectvalues === "0"){
         axios.get('http://localhost:3000/tours')
-            .then(res => {
-                tours = res.data;
-                let sortPro = tours.sort((a, b) => a.price - b.price);
-                sortPro.map(item => {
-                    let tour = document.createElement("div");
-                    tour.className = "tourPacket col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4";
-                    tour.innerHTML = `
-                        <img src=${item.thumbnailUrl} alt="">
-                        <div class="tourstext">
-                            <p>${item.tripcode}</p>
-                            <h5>${item.country}</h5>
-                            <div class="times">
-                                <div class="time">
-                                    <i class="fa-regular fa-clock fa-sm" style="color: #000000;"></i>
-                                    <p>${item.tripduration}</p>
-                                </div>
-                                <div class="time">
-                                    <i class="fa-solid fa-location-dot fa-sm" style="color: #000000;"></i>
-                                    <p>${item.locations}</p>
-                                </div>
-                                <div class="time">
-                                    <i class="fa-solid fa-people-group fa-sm" style="color: #000000;"></i>
-                                    <p>${item.groupsize}</p>
-                                </div>
-                            </div>
-                            <h5>${item.price}</h5>
-                            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
-                        </div>
-                    `;
-                    yachttours.appendChild(tour);
-                });
-            });
+        .then( res => {
+            tours = res.data
+            tours.map( item => {
+            let tour = document.createElement("div")
+            tour.className = "tourPacket col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
+            tour.innerHTML = `
+            <img src=${item.thumbnailUrl} alt="">
+            <div class="tourstext">
+            <p>${item.tripcode}</p>
+            <h5>${item.country}</h5>
+            <div class="times">
+                <div class="time">
+                <i class="fa-regular fa-clock fa-sm" style="color: #000000;"></i>
+                <p>${item.tripduration}</p>
+                </div>
+    
+                <div class="time">
+                <i class="fa-solid fa-location-dot fa-sm" style="color: #000000;"></i>
+                <p>${item.locations}</p>
+                </div>
+    
+                <div class="time">
+                <i class="fa-solid fa-people-group fa-sm" style="color: #000000;"></i>
+                <p>${item.groupsize}</p>
+                </div>
+            </div>
+            <h5>${item.price}</h5>
+            <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
+        </div>
+            `
+            yachttours.appendChild(tour)
+            })
+        })
+}}
+price.addEventListener("change",priceAll)
+
+
+
+function sortPrice(){
+    yachttours.innerHTML = ""
+    let selectvalues = price.value 
+    if(selectvalues === "1"){
+        axios.get('http://localhost:3000/tours')
+        .then(res =>{
+            tours = res.data
+            let sortTours = tours.sort((a,b) => parseFloat(a.price.slice(1)) - parseFloat(b.price.slice(1)));
+            sortTours.map( item => {
+                let tour = document.createElement("div")
+                tour.className = "tourPacket col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
+                tour.innerHTML = `
+                <img src=${item.thumbnailUrl} alt="">
+                <div class="tourstext">
+                <p>${item.tripcode}</p>
+                <h5>${item.country}</h5>
+                <div class="times">
+                    <div class="time">
+                    <i class="fa-regular fa-clock fa-sm" style="color: #000000;"></i>
+                    <p>${item.tripduration}</p>
+                    </div>
+        
+                    <div class="time">
+                    <i class="fa-solid fa-location-dot fa-sm" style="color: #000000;"></i>
+                    <p>${item.locations}</p>
+                    </div>
+        
+                    <div class="time">
+                    <i class="fa-solid fa-people-group fa-sm" style="color: #000000;"></i>
+                    <p>${item.groupsize}</p>
+                    </div>
+                </div>
+                <h5>${item.price}</h5>
+                <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
+            </div>
+                `
+                yachttours.appendChild(tour)
+                })
+        })
     }
 }
-price.addEventListener('change', sortPrice);
 
-
+price.addEventListener("change",sortPrice)
+function sortPrices(){
+    yachttours.innerHTML = ""
+    let selectvalues = price.value 
+    if(selectvalues === "2"){
+        axios.get('http://localhost:3000/tours')
+        .then(res =>{
+            tours = res.data
+            let sortTours = tours.sort((a,b) => parseFloat(b.price.slice(1)) - parseFloat(a.price.slice(1)));
+            sortTours.map( item => {
+                let tour = document.createElement("div")
+                tour.className = "tourPacket col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
+                tour.innerHTML = `
+                <img src=${item.thumbnailUrl} alt="">
+                <div class="tourstext">
+                <p>${item.tripcode}</p>
+                <h5>${item.country}</h5>
+                <div class="times">
+                    <div class="time">
+                    <i class="fa-regular fa-clock fa-sm" style="color: #000000;"></i>
+                    <p>${item.tripduration}</p>
+                    </div>
+        
+                    <div class="time">
+                    <i class="fa-solid fa-location-dot fa-sm" style="color: #000000;"></i>
+                    <p>${item.locations}</p>
+                    </div>
+        
+                    <div class="time">
+                    <i class="fa-solid fa-people-group fa-sm" style="color: #000000;"></i>
+                    <p>${item.groupsize}</p>
+                    </div>
+                </div>
+                <h5>${item.price}</h5>
+                <a href="./explore.html"><button onclick="gotoExplore(${item.id})">Explore</button></a>
+            </div>
+                `
+                yachttours.appendChild(tour)
+                })
+        })
+    }
+}
+price.addEventListener("change",sortPrices)
 const triptypes = document.getElementById('triptypes')
 
 function triptypeHoliday(){
@@ -367,8 +452,6 @@ function triptypeAll(){
         })
 }}
 locations.addEventListener("change",triptypeAll)
-
-
 
 
 function locationAmerica(){

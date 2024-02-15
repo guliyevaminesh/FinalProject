@@ -59,7 +59,7 @@ $(document).ready(function () {
             })
         })
 }
-// locationTurkey()
+locationTurkey()
 
 function locationSwitzerland(){
     tripdestinations.innerHTML = "";
@@ -219,7 +219,7 @@ function locationAmerica(){
         })
     })
 }
-locationAmerica();
+// locationAmerica();
 
 function locationDubai(){
     tripdestinations.innerHTML = "";

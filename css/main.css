@@ -99,17 +99,12 @@ header span {
   font-size: 20px;
 }
 
-@media screen and (min-width: 900px) and (max-width: 1100px) {
-  .navbar-nav .nav-link {
-    font-size: 12px;
+@media screen and (min-width: 990px) and (max-width: 1200px) {
+  .nav-link {
+    font-size: 10px !important;
   }
 }
-@media screen and (max-width: 991px) {
-  .dashboard {
-    display: none;
-  }
-}
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 990px) {
   .canvasbtn {
     display: none;
   }
@@ -136,8 +131,7 @@ header span {
   font-weight: 500;
 }
 
-/* Hide the dashboard button when viewport width is less than or equal to 560px */
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 990px) {
   .dashboard {
     display: none;
   }
@@ -882,9 +876,6 @@ footer .container .row .paymentext {
 .aboutushead nav img {
   width: 240px;
 }
-.aboutushead nav .collapseDiv {
-  justify-content: flex-end;
-}
 .aboutushead nav .collapseDiv ul {
   display: flex;
   gap: 15px;
@@ -965,10 +956,12 @@ footer .container .row .paymentext {
   font-size: 20px;
 }
 
-@media screen and (max-width: 660px) {
-  .dashboard {
-    display: none !important;
+@media screen and (min-width: 990px) and (max-width: 1200px) {
+  .nav-link {
+    font-size: 10px !important;
   }
+}
+@media screen and (max-width: 990px) {
   .canvasbtn {
     display: none;
   }
@@ -4758,66 +4751,171 @@ footer .container .row .paymentext {
   text-decoration: none;
 }
 #countryInformation .container .row #information {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 20px;
+  display: none;
+  margin-top: 30px;
 }
-#countryInformation .container .row #information #pricings {
+#countryInformation .container .row #information #informationtourprice {
   display: flex;
   flex-direction: column;
+  gap: 30px;
 }
-#countryInformation .container .row #information #paxselector {
+#countryInformation .container .row #information #informationtourprice #selectdate {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+}
+#countryInformation .container .row #information #informationtourprice #selectdate p {
+  font-weight: 600;
+}
+#countryInformation .container .row #information #informationtourprice #selectdate #dateInput {
+  outline: none;
+  padding: 5px;
+  border: 1px solid #018498;
+  border-radius: 4px;
+}
+#countryInformation .container .row #information #informationtourprice #selectdate #dateInput:hover {
+  background-color: rgba(1, 132, 152, 0.5);
+}
+#countryInformation .container .row #information #informationtourprice #selectdate #clearAll {
+  border: none;
+  border: 1px solid red;
+  border-radius: 3px;
+  padding: 5px;
+}
+#countryInformation .container .row #information #informationtourprice #selectdate #clearAll:hover {
+  border: none;
+  background-color: rgba(255, 0, 0, 0.4);
+}
+#countryInformation .container .row #information #informationtourprice #pricings {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  background-color: #F4F4F8;
+  padding: 30px;
 }
-#countryInformation .container .row #information #paxselector .paxprice {
+#countryInformation .container .row #information #informationtourprice #pricings p {
+  font-weight: 600;
+  font-size: 18px;
+}
+#countryInformation .container .row #information #informationtourprice #pricings #special {
+  border: none;
+  text-align: left;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  height: 40px;
+  padding-left: 15px;
+  border-radius: 4px;
+}
+#countryInformation .container .row #information #informationtourprice #pricings #family {
+  border: none;
+  text-align: left;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  height: 40px;
+  padding-left: 15px;
+  border-radius: 4px;
+}
+#countryInformation .container .row #information #informationtourprice #pricings #honeymoon {
+  border: none;
+  text-align: left;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  height: 40px;
+  padding-left: 15px;
+  border-radius: 4px;
+}
+#countryInformation .container .row #information #informationtourprice #pricings .paxselector {
+  display: none;
+  justify-content: flex-end;
+  margin-top: 20px;
+  background-color: white;
+  padding: 10px;
+}
+#countryInformation .container .row #information #informationtourprice #pricings .paxselector .paxpricetext {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+#countryInformation .container .row #information #informationtourprice #pricings .paxselector .paxpricetext .pax {
+  font-weight: 600;
+  font-size: 18px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+#countryInformation .container .row #information #informationtourprice #pricings .paxselector .paxpricetext .paxprice {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
-#countryInformation .container .row #information #paxselector .paxprice .personprice {
+#countryInformation .container .row #information #informationtourprice #pricings .paxselector .paxpricetext .paxprice .personprice {
   display: flex;
-  gap: 7px;
 }
-#countryInformation .container .row #information .touroverview {
-  padding: 10px;
+#countryInformation .container .row #information #informationtourprice #pricings .paxselector .paxpricetext .paxprice .personprice .increaseBtn {
+  border: none;
+  height: 30px;
+  width: 30px;
+  background-color: #F4F4F8;
 }
-#countryInformation .container .row #information .touroverview p {
-  font-size: 13px;
+#countryInformation .container .row #information #informationtourprice #pricings .paxselector .paxpricetext .paxprice .personprice .decreaseBtn {
+  border: none;
+  height: 30px;
+  width: 30px;
+  background-color: #F4F4F8;
 }
-#countryInformation .container .row #information .touroutline {
-  padding: 10px;
-}
-#countryInformation .container .row #information .touroutline p {
-  font-size: 13px;
-}
-#countryInformation .container .row #information .tourinclude {
-  padding: 10px;
-}
-#countryInformation .container .row #information .tourinclude p {
-  font-size: 13px;
-}
-#countryInformation .container .row #information .tourexclude {
-  padding: 10px;
-}
-#countryInformation .container .row #information .tourexclude p {
-  font-size: 13px;
-}
-#countryInformation .container .row #information .tourgallery {
+#countryInformation .container .row #information #informationtourprice #pricings .paxselector .paxpricetext .paxprice .personprice .counter {
+  border: 1px solid black;
+  height: 30px;
+  width: 30px;
+  background-color: white;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
-#countryInformation .container .row #information .tourgallery img {
-  width: 300px;
-}
-#countryInformation .container .row #information .tourreview {
+#countryInformation .container .row #information #informationtourprice #total {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #F4F4F8;
+  padding: 10px;
 }
-#countryInformation .container .row #information .tourreview img {
-  width: 300px;
+#countryInformation .container .row #information #informationtourprice #total .pricingtext {
+  display: flex;
+  gap: 10px;
+}
+#countryInformation .container .row #information #informationtourprice #total .pricingtext #pricingvalue {
+  padding-top: 1px;
+  font-size: 14px;
+}
+#countryInformation .container .row #information #informationtourprice #total .datetext {
+  display: flex;
+  gap: 10px;
+}
+#countryInformation .container .row #information #informationtourprice #total .datetext #datevalue {
+  padding-top: 1px;
+  font-size: 14px;
+}
+#countryInformation .container .row #information #informationtourprice #total .totaltext {
+  display: flex;
+  gap: 5px;
+}
+#countryInformation .container .row #information #informationtourprice #total .totaltext #booknow {
+  border: none;
+  background-color: rgba(19, 131, 148, 0.4);
+  padding: 5px;
+  border-radius: 4px;
+}
+#countryInformation .container .row .succesicon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#countryInformation .container .row .succesicon img {
+  width: 10%;
+}
+#countryInformation .container .row .succesicon h3 {
+  color: #3EB655;
 }
 
 #countrymap {
@@ -5817,9 +5915,6 @@ footer .container .row .paymentext {
 .getinformationhead nav img {
   width: 240px;
 }
-.getinformationhead nav .collapseDiv {
-  justify-content: flex-end;
-}
 .getinformationhead nav .collapseDiv ul {
   display: flex;
   gap: 15px;
@@ -5900,6 +5995,16 @@ footer .container .row .paymentext {
   font-size: 20px;
 }
 
+@media screen and (min-width: 990px) and (max-width: 1200px) {
+  .nav-link {
+    font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 990px) {
+  .canvasbtn {
+    display: none;
+  }
+}
 @media screen and (max-width: 660px) {
   .dashboard {
     display: none !important;

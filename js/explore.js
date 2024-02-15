@@ -119,7 +119,7 @@ exploretours.map( (item,index) => {
     </div>
 
     </div>
-    <button onclick="">Book Now</button>
+    <button id="booksnow">Book Now</button>
     <p>Trip Code <span>${item.tripcode}</span></p>
     </div>
     
@@ -339,14 +339,331 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
- document.getElementById("booking").addEventListener("click", function() {
-    document.getElementById("information").innerHTML = document.getElementById("selectdate").innerHTML;
+  document.getElementById('booking').addEventListener('click', function() {
+    document.getElementById('information').style.display = 'block';
 });
-document.getElementById("information").addEventListener("change", function(event) {
-    if (event.target && event.target.id === "dateInput") {
-        document.getElementById("pricings").style.display = "block";
+
+document.getElementById('special').addEventListener('click', function() {
+    document.querySelectorAll('.paxselector').forEach(function(el) {
+        el.style.display = 'none';
+    });
+    document.getElementById('paxselectorspecial').style.display = 'block';
+});
+
+document.getElementById('family').addEventListener('click', function() {
+    document.querySelectorAll('.paxselector').forEach(function(el) {
+        el.style.display = 'none';
+    });
+    document.getElementById('paxselectorfamily').style.display = 'block';
+});
+
+document.getElementById('honeymoon').addEventListener('click', function() {
+    document.querySelectorAll('.paxselector').forEach(function(el) {
+        el.style.display = 'none';
+    });
+    document.getElementById('paxselectorhoneymoon').style.display = 'block';
+});
+
+document.getElementById('booking').addEventListener('click', function() {
+    document.getElementById('information').style.display = 'block';
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const adultCounterElement =  document.querySelector('.paxprice .adultCounter');
+    const adultIncreaseBtn = document.querySelector('.paxprice .increaseBtn');
+    const adultDecreaseBtn = document.querySelector('.paxprice .decreaseBtn');
+    
+    let adultCount = 0;
+
+    function updateAdultCounter() {
+        adultCounterElement.textContent = adultCount;
     }
+
+    adultIncreaseBtn.addEventListener('click', function() {
+        if (adultCount < 7) {
+            adultCount++;
+            updateAdultCounter();
+        }
+    });
+
+    adultDecreaseBtn.addEventListener('click', function() {
+        if (adultCount > 0) {
+            adultCount--;
+            updateAdultCounter();
+        }
+    });
+
+    const counterElement = document.querySelector('.paxprice .counter');
+    const increaseBtn = document.querySelector('.paxprice .personprice .increaseBtn');
+    const decreaseBtn = document.querySelector('.paxprice .personprice .decreaseBtn');
+    
+    let count = 0;
+
+    function updateCounter() {
+        counterElement.textContent = count;
+    }
+
+    increaseBtn.addEventListener('click', function() {
+        count++;
+        updateCounter();
+    });
+
+    decreaseBtn.addEventListener('click', function() {
+        if (count > 0) {
+            count--;
+            updateCounter();
+        }
+    });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Family Pax Selector
+    const familyAdultCounterElements = document.querySelectorAll('#paxselectorfamily .adultCounter');
+    const familyIncreaseBtns = document.querySelectorAll('#paxselectorfamily .increaseBtn');
+    const familyDecreaseBtns = document.querySelectorAll('#paxselectorfamily .decreaseBtn');
+    
+    let familyAdultCounts = Array.from(familyAdultCounterElements).map(() => 0);
+
+    function updateFamilyAdultCounter(index) {
+        familyAdultCounterElements[index].textContent = familyAdultCounts[index];
+    }
+
+    familyIncreaseBtns.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            if (familyAdultCounts[index] < 7) {
+                familyAdultCounts[index]++;
+                updateFamilyAdultCounter(index);
+            }
+        });
+    });
+
+    familyDecreaseBtns.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            if (familyAdultCounts[index] > 0) {
+                familyAdultCounts[index]--;
+                updateFamilyAdultCounter(index);
+            }
+        });
+    });
+
+    // Common Counter
+    const counterElements = document.querySelectorAll('.paxprice .counter');
+    const increaseBtns = document.querySelectorAll('.paxprice .personprice .increaseBtn');
+    const decreaseBtns = document.querySelectorAll('.paxprice .personprice .decreaseBtn');
+    
+    let commonCount = 0;
+
+    function updateCounter() {
+        counterElements.forEach(function(element) {
+            element.textContent = commonCount;
+        });
+    }
+
+    increaseBtns.forEach(function(button) {
+        button.addEventListener('click', function() {
+            commonCount++;
+            updateCounter();
+        });
+    });
+
+    decreaseBtns.forEach(function(button) {
+        button.addEventListener('click', function() {
+            if (commonCount > 0) {
+                commonCount--;
+                updateCounter();
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Pax Selector Honeymoon
+    const honeymoonAdultCounterElements = document.querySelectorAll('#paxselectorhoneymoon .adultCounter');
+    const honeymoonIncreaseBtns = document.querySelectorAll('#paxselectorhoneymoon .increaseBtn');
+    const honeymoonDecreaseBtns = document.querySelectorAll('#paxselectorhoneymoon .decreaseBtn');
+    
+    let honeymoonAdultCounts = Array.from(honeymoonAdultCounterElements).map(() => 0);
+
+    function updateHoneymoonAdultCounter(index) {
+        honeymoonAdultCounterElements[index].textContent = honeymoonAdultCounts[index];
+    }
+
+    honeymoonIncreaseBtns.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            if (honeymoonAdultCounts[index] < 7) {
+                honeymoonAdultCounts[index]++;
+                updateHoneymoonAdultCounter(index);
+            }
+        });
+    });
+
+    honeymoonDecreaseBtns.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            if (honeymoonAdultCounts[index] > 0) {
+                honeymoonAdultCounts[index]--;
+                updateHoneymoonAdultCounter(index);
+            }
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const specialBtn = document.getElementById('special');
+    const familyBtn = document.getElementById('family');
+    const honeymoonBtn = document.getElementById('honeymoon');
+    const pricingValue = document.getElementById('pricingvalue');
+    const dateInput = document.getElementById('dateInput');
+    const dateValue = document.getElementById('datevalue');
+
+    specialBtn.addEventListener('click', function() {
+        pricingValue.textContent = specialBtn.textContent;
+    });
+
+    familyBtn.addEventListener('click', function() {
+        pricingValue.textContent = familyBtn.textContent;
+    });
+
+    honeymoonBtn.addEventListener('click', function() {
+        pricingValue.textContent = honeymoonBtn.textContent;
+    });
+
+    dateInput.addEventListener('change', function() {
+        dateValue.textContent = dateInput.value;
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Pax Selector Special
+    const specialIncreaseBtn = document.querySelector('#paxselectorspecial .increaseBtn');
+    const specialDecreaseBtn = document.querySelector('#paxselectorspecial .decreaseBtn');
+    const totalValue = document.getElementById('totalvalue');
+
+    let totalPrice = 0;
+
+    function updateTotalPrice() {
+        totalValue.textContent = '$' + totalPrice.toFixed(2);
+    }
+
+    specialIncreaseBtn.addEventListener('click', function() {
+        totalPrice += 425;
+        updateTotalPrice();
+    });
+
+    specialDecreaseBtn.addEventListener('click', function() {
+        if (totalPrice >= 425) {
+            totalPrice -= 425;
+            updateTotalPrice();
+        }
+    });
+
+    // Pax Selector Family
+    const familyIncreaseBtn = document.querySelector('#paxselectorfamily .increaseBtn');
+    const familyDecreaseBtn = document.querySelector('#paxselectorfamily .decreaseBtn');
+
+    familyIncreaseBtn.addEventListener('click', function() {
+        totalPrice += 886;
+        updateTotalPrice();
+    });
+
+    familyDecreaseBtn.addEventListener('click', function() {
+        if (totalPrice >= 886) {
+            totalPrice -= 886;
+            updateTotalPrice();
+        }
+    });
+
+    // Pax Selector Honeymoon
+    const honeymoonIncreaseBtn = document.querySelector('#paxselectorhoneymoon .increaseBtn');
+    const honeymoonDecreaseBtn = document.querySelector('#paxselectorhoneymoon .decreaseBtn');
+
+    honeymoonIncreaseBtn.addEventListener('click', function() {
+        totalPrice += 1059;
+        updateTotalPrice();
+    });
+
+    honeymoonDecreaseBtn.addEventListener('click', function() {
+        if (totalPrice >= 1059) {
+            totalPrice -= 1059;
+            updateTotalPrice();
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const bookNowBtn = document.getElementById('booknow');
+    const informationDiv = document.getElementById('information');
+    const succesIconDiv = document.createElement('div');
+
+    succesIconDiv.innerHTML = `
+        <div class="succesicon">
+            <img src="./assets/img/succesicon.png" alt="">
+            <h3>Your reservation is successful!!</h3>
+        </div>
+    `;
+
+    bookNowBtn.addEventListener('click', function() {
+        informationDiv.innerHTML = ''; 
+        informationDiv.appendChild(succesIconDiv); 
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const bookNowBtn = document.getElementById('booksnow'); 
+    const informationDiv = document.getElementById('information');
+    const dateInput = document.getElementById('dateInput');
+    const specialBtn = document.getElementById('special');
+    const familyBtn = document.getElementById('family');
+    const honeymoonBtn = document.getElementById('honeymoon');
+
+    bookNowBtn.addEventListener('click', function() {
+        if (!dateInput.value || (!specialBtn.checked && !familyBtn.checked && !honeymoonBtn.checked)) {
+            return;
+        }
+
+        const reservationMessage = document.createElement('div');
+        reservationMessage.textContent = "Rezervasyonunuz tamamlanmıştır.";
+        reservationMessage.style.marginTop = '20px';
+        reservationMessage.style.fontWeight = 'bold';
+        informationDiv.style.display = 'none';
+        informationDiv.parentNode.insertBefore(reservationMessage, informationDiv.nextSibling);
+    });
+
+ 
+    bookNowBtn.addEventListener('click', function() {
+        informationDiv.style.display = 'block';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const clearAllBtn = document.getElementById('clearAll');
+    const dateInput = document.getElementById('dateInput');
+    const specialBtn = document.getElementById('special');
+    const familyBtn = document.getElementById('family');
+    const honeymoonBtn = document.getElementById('honeymoon');
+    const adultCounters = document.querySelectorAll('.adultCounter');
+    const counters = document.querySelectorAll('.counter');
+    const pricingValue = document.getElementById('pricingvalue');
+    const dateValue = document.getElementById('datevalue');
+    const totalValue = document.getElementById('totalvalue');
+
+    clearAllBtn.addEventListener('click', function() {
+        
+        dateInput.value = '';
+        specialBtn.checked = false;
+        familyBtn.checked = false;
+        honeymoonBtn.checked = false;
+        adultCounters.forEach(function(counter) {
+            counter.textContent = '0';
+        });
+        counters.forEach(function(counter) {
+            counter.textContent = '0';
+        });
+        pricingValue.textContent = '';
+        dateValue.textContent = '';
+        totalValue.textContent = '';
+    });
+});
+
 
 
 
