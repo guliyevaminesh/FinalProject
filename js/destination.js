@@ -16,34 +16,6 @@ $(document).ready(function () {
     });
 });
 
-document.getElementById("turkey").addEventListener("click", function() {
-    locationTurkey();
-  });
-  
-  document.getElementById("switzerland").addEventListener("click", function() {
-    locationSwitzerland();
-  });
-  
-  document.getElementById("japan").addEventListener("click", function() {
-    locationJapan();
-  });
-  
-  document.getElementById("greece").addEventListener("click", function() {
-    locationGreece();
-  });
-
-  document.getElementById("america").addEventListener("click", function() {
-    locationAmerica();
-  });
-  
-  document.getElementById("dubai").addEventListener("click", function() {
-    locationDubai();
-  });
-  
-  document.getElementById("france").addEventListener("click", function() {
-    locationFrance();
-  });
-  
-  document.getElementById("germany").addEventListener("click", function() {
-    locationGermany();
-  });
+function showTours(location) {
+  window.location.href = `view.html?location=${location}`;
+}

@@ -18,9 +18,10 @@ $(document).ready(function () {
 
 
 
- const tripdestinations = document.getElementById('tripdestinations')
 
- function locationTurkey(){
+const tripdestinations = document.getElementById('tripdestinations')
+
+function locationTurkey(){
     console.log("locationTurkey function called");
     tripdestinations.innerHTML = "";
         axios.get('http://localhost:3000/tours?locations=Turkey')
@@ -59,7 +60,7 @@ $(document).ready(function () {
             })
         })
 }
-locationTurkey()
+
 
 function locationSwitzerland(){
     tripdestinations.innerHTML = "";
@@ -99,7 +100,7 @@ function locationSwitzerland(){
         })
     })
 }
-// locationSwitzerland();
+
 
 function locationJapan(){
     tripdestinations.innerHTML = "";
@@ -139,7 +140,7 @@ function locationJapan(){
         })
     })
 }
-// locationJapan();
+
 
 function locationGreece(){
     tripdestinations.innerHTML = "";
@@ -179,7 +180,7 @@ function locationGreece(){
         })
     })
 }
-// locationGreece();
+
 
 function locationAmerica(){
     tripdestinations.innerHTML = "";
@@ -219,7 +220,6 @@ function locationAmerica(){
         })
     })
 }
-// locationAmerica();
 
 function locationDubai(){
     tripdestinations.innerHTML = "";
@@ -259,7 +259,7 @@ function locationDubai(){
         })
     })
 }
-// locationDubai();
+
 
 function locationFrance(){
     tripdestinations.innerHTML = "";
@@ -299,7 +299,7 @@ function locationFrance(){
         })
     })
 }
-// locationFrance();
+
 
 function locationGermany(){
     tripdestinations.innerHTML = "";
@@ -339,7 +339,31 @@ function locationGermany(){
         })
     })
 }
-// locationGermany();
+
+
+
+window.onload = function() {
+    const params = new URLSearchParams(window.location.search);
+    const location = params.get('location');
+    if(location == "turkey"){
+        locationTurkey();
+    }else if(location == "switzerland"){
+        locationSwitzerland()
+    }else if(location == "japan"){
+        locationJapan()
+    }else if(location == "greece"){
+        locationGreece()
+    }else if(location == "america"){
+        locationAmerica()
+    }else if(location == "dubai"){
+        locationDubai()
+    }else if(location == "france"){
+        locationFrance()
+    }else if(location == "germany"){
+        locationGermany()
+    }
+}
+
 
 
 function gotoExplore(id){
@@ -352,34 +376,5 @@ function gotoExplore(id){
     localStorage.setItem("exploretours",JSON.stringify(exploretours))
 }
 
-const countrynames = document.getElementById('countryname')
-function getCountryname(){
-    let exploretours = JSON.parse(localStorage.getItem("exploretours")) || []
-    exploretours.map( (item,index) => {
-            let countryname = document.createElement('div')
-            countryname.className = "countryname"
-            countryname.innerHTML = `
-            <h1>${item.country}</h1> 
-    `
-    countrynames.appendChild(countryname)
-} ) 
 
-}
 
-getCountryname()
-
-const countrynameduplicate = document.getElementById('countrynameduplicate')
-function getCountrynameduplicate(){
-    let exploretours = JSON.parse(localStorage.getItem("exploretours")) || []
-    exploretours.map( (item,index) => {
-            let countryname = document.createElement('span')
-            countryname.className = "countryname"
-            countryname.innerHTML = `
-            <span>${item.country}</span> 
-    `
-    countrynameduplicate.appendChild(countryname)
-} ) 
-
-}
-
-getCountrynameduplicate()

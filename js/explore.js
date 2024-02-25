@@ -131,6 +131,7 @@ exploretours.map( (item,index) => {
 tourInformation()
 
 const information = document.getElementById('information');
+const details = document.getElementById('details');
 const countrymap = document.getElementById('countrymap');
 function getMap(){
     let exploretours = JSON.parse(localStorage.getItem("exploretours")) || []
@@ -146,14 +147,17 @@ function getMap(){
 getMap()
 
 function getOverview(){
+
     let exploretours = JSON.parse(localStorage.getItem("exploretours")) || []
     exploretours.map( (item,index) => {
             let touroverview = document.createElement('div')
             touroverview.className = "touroverview"
             touroverview.innerHTML = `
            <p>${item.overview}</p>
+           
     `
-    information.appendChild(touroverview)
+    details.appendChild(touroverview)
+
 })
 }
 
@@ -165,11 +169,12 @@ function getOutline(){
             touroutline.innerHTML = `
            <p>${item.outline}</p>
     `
-    information.appendChild(touroutline)
+    details.appendChild(touroutline)
 })
 }
 
 function getInclude(){
+
     let exploretours = JSON.parse(localStorage.getItem("exploretours")) || []
     exploretours.map( (item,index) => {
             let tourinclude = document.createElement('div')
@@ -177,7 +182,7 @@ function getInclude(){
             tourinclude.innerHTML = `
            <p>${item.includes}</p>
     `
-    information.appendChild(tourinclude)
+    details.appendChild(tourinclude)
 })
 }
 function getExclude(){
@@ -188,7 +193,7 @@ function getExclude(){
             tourexclude.innerHTML = `
            <p>${item.excludes}</p>
     `
-    information.appendChild(tourexclude)
+    details.appendChild(tourexclude)
 })
 }
 function getGallery(){
@@ -203,7 +208,7 @@ function getGallery(){
             <img src="${item.gallery4}" alt="">
             <img src="${item.gallery5}" alt="">
     `
-    information.appendChild(tourgallery)
+    details.appendChild(tourgallery)
 })
 }
 function getReview(){
@@ -214,7 +219,7 @@ function getReview(){
             tourreview.innerHTML = `
            <p>${item.reviews}</p>
     `
-    information.appendChild(tourreview)
+    details.appendChild(tourreview)
 })
 }
 function getFaq(){
@@ -225,7 +230,7 @@ function getFaq(){
             tourfaq.innerHTML = `
            <p>${item.faq}</p>
     `
-    information.appendChild(tourfaq)
+    details.appendChild(getFaq)
 })
 }
 document.addEventListener("DOMContentLoaded", function() {
@@ -239,45 +244,49 @@ document.addEventListener("DOMContentLoaded", function() {
     const itinerariesSection = document.getElementById('itineraries');
     
     overviewButton.addEventListener('click', function() {
-       
-        information.innerHTML = '';
+       details.innerHTML = '';
+        information.style.display = 'none'; 
         getOverview();
-        itinerariesSection.style.display = 'none';
+
       });
 
     outlineButton.addEventListener('click', function() {
-       
-        information.innerHTML = '';
+        details.innerHTML = '';
+        information.style.display = 'none'; 
         getOutline();
       });
 
     includeButton.addEventListener('click', function() {
-       
-        information.innerHTML = '';
-        getInclude();
+        details.innerHTML = '';
         itinerariesSection.style.display = 'none';
+        information.style.display = 'none'; 
+        getInclude();
       });
 
       excludeButton.addEventListener('click', function() {
-        information.innerHTML = '';
+        details.innerHTML = '';
+          itinerariesSection.style.display = 'none';
+          information.style.display = 'none'; 
         getExclude();
-        itinerariesSection.style.display = 'none';
       });
 
       galleryButton.addEventListener('click', function() {
-        information.innerHTML = '';
+        details.innerHTML = '';
+        information.style.display = 'none'; 
         getGallery();
         itinerariesSection.style.display = 'none';
       });
 
       reviewButton.addEventListener('click', function() {
-        information.innerHTML = '';
+        details.innerHTML = '';
+        information.style.display = 'none'; 
         getReview();
         itinerariesSection.style.display = 'none';
       });
 
       faqButton.addEventListener('click', function() {
-        information.innerHTML = '';
+          details.innerHTML = '';
+          information.style.display = 'none'; 
         getFaq();
         itinerariesSection.style.display = 'none';
       });
@@ -322,27 +331,6 @@ getPlanTwo();
 
 getPlanThree();
 
-document.addEventListener("DOMContentLoaded", function() {
-    const itinerariesSection = document.getElementById('itineraries');
-    const outlineButton = document.getElementById('outline');
-    const otherButtons = document.querySelectorAll('.itinerariestext button');
-  
-    outlineButton.addEventListener('click', function() {
-      itinerariesSection.style.display = 'block';
-    });
-  
-    otherButtons.forEach(function(button) {
-      button.addEventListener('click', function() {
-        itinerariesSection.style.display = 'none';
-      });
-    });
-  });
-
-
-  document.getElementById('booking').addEventListener('click', function() {
-    document.getElementById('information').style.display = 'block';
-});
-
 document.getElementById('special').addEventListener('click', function() {
     document.querySelectorAll('.paxselector').forEach(function(el) {
         el.style.display = 'none';
@@ -365,9 +353,13 @@ document.getElementById('honeymoon').addEventListener('click', function() {
 });
 
 document.getElementById('booking').addEventListener('click', function() {
+    details.innerHTML = ''
     document.getElementById('information').style.display = 'block';
 });
-
+document.getElementById('booksnow').addEventListener('click', function() {
+    details.innerHTML = ''
+    document.getElementById('information').style.display = 'block';
+});
 document.addEventListener('DOMContentLoaded', function() {
     const adultCounterElement =  document.querySelector('.paxprice .adultCounter');
     const adultIncreaseBtn = document.querySelector('.paxprice .increaseBtn');
@@ -607,32 +599,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const bookNowBtn = document.getElementById('booksnow'); 
-    const informationDiv = document.getElementById('information');
-    const dateInput = document.getElementById('dateInput');
-    const specialBtn = document.getElementById('special');
-    const familyBtn = document.getElementById('family');
-    const honeymoonBtn = document.getElementById('honeymoon');
 
-    bookNowBtn.addEventListener('click', function() {
-        if (!dateInput.value || (!specialBtn.checked && !familyBtn.checked && !honeymoonBtn.checked)) {
-            return;
-        }
-
-        const reservationMessage = document.createElement('div');
-        reservationMessage.textContent = "Rezervasyonunuz tamamlanmıştır.";
-        reservationMessage.style.marginTop = '20px';
-        reservationMessage.style.fontWeight = 'bold';
-        informationDiv.style.display = 'none';
-        informationDiv.parentNode.insertBefore(reservationMessage, informationDiv.nextSibling);
-    });
-
- 
-    bookNowBtn.addEventListener('click', function() {
-        informationDiv.style.display = 'block';
-    });
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     const clearAllBtn = document.getElementById('clearAll');

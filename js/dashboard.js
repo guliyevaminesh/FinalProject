@@ -60,7 +60,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     axios.get('https://65680f2a9927836bd97406ef.mockapi.io/sailuxe/dashboard')
     .then(function(response) {
         var userData = response.data;
-        var matchedUser = userData.find(user => user.regiterusername === username && user.registeremail === email && user.registerpassword === password);
+        var matchedUser = userData.find(user => user.registerusername === username && user.registeremail === email && user.registerpassword === password);
 
         if (matchedUser) {
             console.log('Giriş başarılı:', matchedUser);

@@ -2948,7 +2948,7 @@ footer .container .row .paymentext {
   height: 30px;
   padding: 10px;
 }
-#dashboardForm .container #registerForm .myform .dashboardInputs #username {
+#dashboardForm .container #registerForm .myform .dashboardInputs #regiterusername {
   width: 100% !important;
   border: none;
   height: 30px;
@@ -2958,7 +2958,7 @@ footer .container .row .paymentext {
   padding-top: 12px;
   outline: none;
 }
-#dashboardForm .container #registerForm .myform .dashboardInputs #password {
+#dashboardForm .container #registerForm .myform .dashboardInputs #registerpassword {
   width: 100% !important;
   border: none;
   height: 30px;
@@ -2968,7 +2968,7 @@ footer .container .row .paymentext {
   padding-top: 12px;
   outline: none;
 }
-#dashboardForm .container #registerForm .myform .dashboardInputs #email {
+#dashboardForm .container #registerForm .myform .dashboardInputs #registeremail {
   width: 100% !important;
   border: none;
   height: 30px;
@@ -4750,9 +4750,25 @@ footer .container .row .paymentext {
 #countryInformation .container .row #coutrytripinfo a {
   text-decoration: none;
 }
+#countryInformation .container .row #details {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  gap: 30px;
+}
+#countryInformation .container .row #details img {
+  width: 300px;
+  margin-bottom: 30px;
+}
 #countryInformation .container .row #information {
   display: none;
   margin-top: 30px;
+}
+#countryInformation .container .row #information .tourGallery {
+  display: flex;
+}
+#countryInformation .container .row #information .tourGallery img {
+  max-width: 100%;
 }
 #countryInformation .container .row #information #informationtourprice {
   display: flex;

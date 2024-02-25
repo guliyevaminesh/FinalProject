@@ -44,25 +44,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 800); 
   });
 
-  // document.getElementById("turkey").addEventListener("click", function() {
-  //   tripdestinations.innerHTML = "";
-  //   locationTurkey();
-  // }); 
-  
-  // document.getElementById("switzerland").addEventListener("click", function() {
-  //   tripdestinations.innerHTML = "";
-  //   locationSwitzerland();
-  // });
-  
-  // document.getElementById("japan").addEventListener("click", function() {
-  //   tripdestinations.innerHTML = "";
-  //   locationJapan();
-  // });
-  
-  // document.getElementById("greece").addEventListener("click", function() {
-  //   tripdestinations.innerHTML = "";
-  //   locationGreece();
-  // });
+  function showTours(location) {
+    window.location.href = `view.html?location=${location}`;
+}
+
+
   
   const exquisitetour = document.getElementById('exquisitetour')
   
@@ -106,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
   }
   getTours();
+  
   function gotoExplore(id){
     let exploretours = JSON.parse(localStorage.getItem("exploretours")) || []
      exploretours.push(tours.find(item => item.id == id))
